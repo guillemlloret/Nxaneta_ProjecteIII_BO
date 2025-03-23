@@ -27,7 +27,7 @@ public class Walkable : MonoBehaviour
     {
 
         float stair = isStair ? stairOffset : 0;
-        return transform.position +transform.up * walkPointOffset - transform.up *stair;
+        return transform.position + transform.up * walkPointOffset - transform.up *stair;
     }
 
     private void OnDrawGizmos()

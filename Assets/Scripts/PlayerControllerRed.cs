@@ -20,6 +20,7 @@ public class PlayerControllerRed : MonoBehaviour
 
     public Transform currentCube;
     public Transform clickedCube;
+    WalkPath finalCurrentCube;
     // public Transform indicator;
 
     [Space]
@@ -36,10 +37,10 @@ public class PlayerControllerRed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(CountPoints());
+      
     }
 
-    void Update()
+   void Update()
     {
         if (Input.GetMouseButtonDown(0) && RedisPlaying)
         {
@@ -131,6 +132,7 @@ public class PlayerControllerRed : MonoBehaviour
         ExploreCube(nextCubes, pastCubes);
         BuildPath();
         
+        
 
     }
 
@@ -197,6 +199,8 @@ public class PlayerControllerRed : MonoBehaviour
             Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
 
             currentCube = finalPath[i];
+         
+            //currentCube.GetComponent<Walkable>().possiblePaths.Clear();
             Debug.Log(player.transform.position);
         }
 

@@ -11,6 +11,7 @@ public class PlayerControllerBlue : MonoBehaviour
     [SerializeField] PointsHUD movements;
     [SerializeField] TMP_Text TurnText;
     public static PlayerControllerBlue Instance;
+    public PlayerControllerRed red;
     public GameObject player;
     public Material highlightMaterial;
     public Material regularMaterial;
@@ -45,6 +46,7 @@ public class PlayerControllerBlue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && BlueisPlaying)
         {
+            Debug.Log("input blue");
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
             if (Physics.Raycast(mouseRay, out mouseHit))
@@ -125,6 +127,7 @@ public class PlayerControllerBlue : MonoBehaviour
 
         ExploreCube(nextCubes, pastCubes);
         BuildPath();
+       
 
 
     }
@@ -180,6 +183,7 @@ public class PlayerControllerBlue : MonoBehaviour
 
     void FollowPath()
     {
+        Debug.Log("following path blue");
 
         walking = true;
 
@@ -190,9 +194,9 @@ public class PlayerControllerBlue : MonoBehaviour
         }
 
         finalPath.Clear();
-
+       
     
-        GameManager.Instance.UpdateGameState(GameState.RedTurn);
+        //GameManager.Instance.UpdateGameState(GameState.RedTurn);
     }
 
     //void Clear()

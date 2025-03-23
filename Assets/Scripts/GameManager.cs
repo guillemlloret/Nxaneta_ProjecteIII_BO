@@ -72,12 +72,13 @@ public class GameManager : MonoBehaviour
     }
     private void HandleRedTurn()
     {
+        Debug.Log("Change state to red");
         PlayerControllerRed.Instance.ChooseTileRed();
 
     }
     private  void HandleBlueTurn()
     {
-      
+        Debug.Log("Change state to blue");
         PlayerControllerBlue.Instance.ChooseTileBlue();
        
 
