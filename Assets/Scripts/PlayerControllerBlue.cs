@@ -23,6 +23,7 @@ public class PlayerControllerBlue : MonoBehaviour
     public Transform currentCubeBlue;
     public Transform clickedCubeBlue;
     // public Transform indicator;
+    public WalkPath finalCube;
 
     [Space]
 
@@ -55,19 +56,23 @@ public class PlayerControllerBlue : MonoBehaviour
 
                 foreach (WalkPath Possiblepath in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
                 {
-                    if (Possiblepath.target == clickedCubeBlue)
-                    {
+        
+                    
+                        if (Possiblepath.target == clickedCubeBlue)
+                        {
 
-                        FindPath();
-                        movements.Movements -= 1;
+                            FindPath();
+                            movements.Movements -= 1;
 
-                        GameManager.Instance.UpdateGameState(GameState.RedTurn);
-                        BlueisPlaying = false;
+                            GameManager.Instance.UpdateGameState(GameState.RedTurn);
+                            BlueisPlaying = false;
+                        }
                     }
-                }
-
-
+                
             }
+
+
+            
         }
     }
 
@@ -193,6 +198,7 @@ public class PlayerControllerBlue : MonoBehaviour
             currentCubeBlue = finalPath[i];
         }
 
+    
         finalPath.Clear();
        
     
