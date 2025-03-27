@@ -3426,6 +3426,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2046895657}
     occupied: 0
+  - target: {fileID: 1675211804}
+    active: 1
+    cube: {fileID: 1675211799}
+    occupied: 0
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
