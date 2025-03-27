@@ -21,6 +21,7 @@ public class PlayerControllerRed : MonoBehaviour
 
     public Transform currentCube;
     public Transform clickedCube;
+    public Transform nextCube;
     WalkPath finalCurrentCube;
     // public Transform indicator;
 
@@ -101,10 +102,15 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 currentCube = playerHit.transform;
                 Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                
+
                 CubeWalkable.MakeOccupied(CubeWalkable);
 
             }
         }
+
+        
+        
 
         foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
         {

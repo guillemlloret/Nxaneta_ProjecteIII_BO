@@ -91,12 +91,25 @@ public class PlayerControllerBlue : MonoBehaviour
         RayCastDown();
 
     }
+
+
     public void RayCastDown()
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
+        Ray playerRayfwd = new Ray(transform.GetChild(0).position, transform.forward);
+
         RaycastHit playerHit;
 
-        if (Physics.Raycast(playerRay, out playerHit))
+        if (Physics.Raycast(playerRayfwd, out playerHit))
+        {
+            if(playerHit.transform.tag == "paret")
+            {
+                Debug.Log("Wall detected");
+            }
+        }
+
+
+            if (Physics.Raycast(playerRay, out playerHit))
         {
             if (playerHit.transform.GetComponent<Walkable>() != null)
             {
