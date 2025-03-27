@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEditor.VisionOS;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
 public class PlayerControllerRed : MonoBehaviour
 {
@@ -54,10 +55,11 @@ public class PlayerControllerRed : MonoBehaviour
                 foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
                 {
                     Debug.Log("WalkPath");
-                    if (Possiblepath.target == clickedCube)
+                    if (Possiblepath.target == clickedCube  && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
                     {
 
                         Debug.Log("Findpath in ");
+                        currentCube.GetComponent<Walkable>().isOccupied = false;
 
                         FindPath();
 
@@ -98,14 +100,21 @@ public class PlayerControllerRed : MonoBehaviour
             if (playerHit.transform.GetComponent<Walkable>() != null)
             {
                 currentCube = playerHit.transform;
+                Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                CubeWalkable.MakeOccupied(CubeWalkable);
+
             }
         }
 
         foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
         {
-            //Possibles caselles
-            Debug.Log(Possiblepath.target);
-            Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+            if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+            {
+                //Possibles caselles
+                Debug.Log(Possiblepath.target);
+                Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+            }
+            
 
         }
     }
@@ -118,11 +127,14 @@ public class PlayerControllerRed : MonoBehaviour
 
         foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths)
         {
+          
             if (path.active)
             {
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock =currentCube;
                 path.cube.GetComponent<MeshRenderer>().material = regularMaterial;
+                
+               
 
             }
         }
@@ -199,7 +211,9 @@ public class PlayerControllerRed : MonoBehaviour
             Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
 
             currentCube = finalPath[i];
-         
+
+            currentCube.GetComponent<Walkable>().isOccupied = true;
+
             //currentCube.GetComponent<Walkable>().possiblePaths.Clear();
             Debug.Log(player.transform.position);
         }

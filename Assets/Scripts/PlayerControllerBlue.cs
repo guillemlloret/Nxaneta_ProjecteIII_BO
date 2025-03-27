@@ -61,6 +61,7 @@ public class PlayerControllerBlue : MonoBehaviour
                         if (Possiblepath.target == clickedCubeBlue)
                         {
 
+                            currentCubeBlue.GetComponent<Walkable>().isOccupied = false;
                             FindPath();
                             movements.Movements -= 1;
 
@@ -100,14 +101,20 @@ public class PlayerControllerBlue : MonoBehaviour
             if (playerHit.transform.GetComponent<Walkable>() != null)
             {
                 currentCubeBlue = playerHit.transform;
+                Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                CubeWalkable.MakeOccupied(CubeWalkable);
+                currentCubeBlue.GetComponent <Walkable>().isOccupied = true;
             }
         }
 
         foreach (WalkPath Possiblepath in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
         {
-            //Possibles caselles
-            Debug.Log(Possiblepath.target);
-            Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+            if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+            {
+                //Possibles caselles
+                Debug.Log(Possiblepath.target);
+                Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+            }
 
         }
     }
@@ -119,7 +126,7 @@ public class PlayerControllerBlue : MonoBehaviour
 
         foreach (WalkPath path in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
         {
-            if (path.active)
+            if (path.active && !path.occupied)
             {
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = currentCubeBlue;
@@ -196,6 +203,8 @@ public class PlayerControllerBlue : MonoBehaviour
         {
             player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 1f;
             currentCubeBlue = finalPath[i];
+
+            currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
         }
 
     

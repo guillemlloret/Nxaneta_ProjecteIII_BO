@@ -51,8 +51,13 @@ public class Walkable : MonoBehaviour
         }
     }
 
+    public void MakeOccupied(Walkable cube)
+    {
+        cube.isOccupied = true;
+    }
     
 }
+
 
 [System.Serializable]
 
@@ -61,6 +66,7 @@ public class WalkPath
     public Transform target;
     public bool active = true;
     public GameObject cube;
+    public bool occupied = false;
 }
 
 
