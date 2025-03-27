@@ -11,6 +11,7 @@ public class BoardRotator : MonoBehaviour
 
     public GameObject leftArrow;
     public GameObject leftArrowPosition;
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class BoardRotator : MonoBehaviour
         {
             if (board.transform.eulerAngles.y == 0)
             {
+                animator.SetBool("RotateLeft", true);
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
                 // Instantiate(leftArrow, leftArrowPosition.transform.position, Quaternion.identity);
                 leftArrow.SetActive(true);
