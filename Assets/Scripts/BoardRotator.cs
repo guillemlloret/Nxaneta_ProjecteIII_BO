@@ -28,6 +28,7 @@ public class BoardRotator : MonoBehaviour
             if (board.transform.eulerAngles.y == 0)
             {
                 animator.SetBool("RotateLeft", true);
+               
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
                 // Instantiate(leftArrow, leftArrowPosition.transform.position, Quaternion.identity);
                 leftArrow.SetActive(true);
@@ -35,6 +36,8 @@ public class BoardRotator : MonoBehaviour
             }
             else if (board.transform.eulerAngles.y == 270)
             {
+                animator.SetBool("RotateRight", false);
+                animator.SetBool("ReturnLeft", true);
                 Debug.Log("-90");
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 leftArrow.SetActive(true);
@@ -51,12 +54,15 @@ public class BoardRotator : MonoBehaviour
         {
             if (board.transform.eulerAngles.y == 90)
             {
+                animator.SetBool("ReturnLeft", false);
+                animator.SetBool("RotateRight", true);
                 Debug.Log("Hola");
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 Debug.Log(board.transform.eulerAngles.y);
             }
             else
             {
+                animator.SetBool("RotateRight", true);
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation_, transform.eulerAngles.z);
                 Debug.Log(board.transform.eulerAngles.y);
             }
