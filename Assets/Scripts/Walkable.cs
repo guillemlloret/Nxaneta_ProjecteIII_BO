@@ -19,6 +19,12 @@ public class Walkable : MonoBehaviour
     public bool isOccupied = false;
 
     [Space]
+    public bool finalRed = false;
+    public bool finalBlue = false;
+
+
+
+    [Space]
 
     [Header("Offsets")]
     public float walkPointOffset = .5f;

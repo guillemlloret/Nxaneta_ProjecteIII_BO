@@ -610,6 +610,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &173891507
@@ -769,13 +771,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.41968027, y: -0.18094139, z: 0.035161488, w: 0.8887589}
-  m_LocalPosition: {x: 4.51, y: 8.33, z: -5.32}
+  m_LocalRotation: {x: 0.4113025, y: -0.29727933, z: 0.09054195, w: 0.85688823}
+  m_LocalPosition: {x: 6.19, y: 8.33, z: -4.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 49.351, y: -26.643, z: -7.886}
+  m_LocalEulerAnglesHint: {x: 49.351, y: -41.894, z: -7.886}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,6 +1192,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &464507714
@@ -1233,7 +1237,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 667432cf9dfa57045ae9106e35eb01d0, type: 2}
+  - {fileID: 2100000, guid: 93018e738052ba649b691debaf1307cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1715,6 +1719,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &629897426
@@ -2072,6 +2078,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &716197893
@@ -2187,6 +2195,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &746538081
@@ -2410,6 +2420,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &817561325
@@ -2701,6 +2713,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 1
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &1001472043
@@ -2834,6 +2848,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &1016582293
@@ -3434,6 +3450,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 1
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &1453453908
@@ -3477,7 +3495,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 93018e738052ba649b691debaf1307cc, type: 2}
+  - {fileID: 2100000, guid: 667432cf9dfa57045ae9106e35eb01d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3716,6 +3734,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &1578854353
@@ -3794,6 +3814,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &1585608144
@@ -3931,6 +3953,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 1
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &1675211801
@@ -4319,6 +4343,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!65 &1922592279
@@ -4531,6 +4557,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &2034255863
@@ -4712,6 +4740,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &2089967103
@@ -4958,6 +4988,8 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 0
+  finalRed: 0
+  finalBlue: 0
   walkPointOffset: 0.5
   stairOffset: 0.4
 --- !u!1 &2108425266

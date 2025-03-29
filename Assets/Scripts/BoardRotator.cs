@@ -27,6 +27,8 @@ public class BoardRotator : MonoBehaviour
         {
             if (board.transform.eulerAngles.y == 0)
             {
+                animator.SetBool("ReturnRight", false);
+                animator.SetBool("RotateRight", false);
                 animator.SetBool("RotateLeft", true);
                
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
@@ -54,8 +56,9 @@ public class BoardRotator : MonoBehaviour
         {
             if (board.transform.eulerAngles.y == 90)
             {
+                animator.SetBool("RotateLeft", false);
                 animator.SetBool("ReturnLeft", false);
-                animator.SetBool("RotateRight", true);
+                animator.SetBool("ReturnRight", true);
                 Debug.Log("Hola");
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 Debug.Log(board.transform.eulerAngles.y);
