@@ -70,8 +70,25 @@ public class PlayerControllerRed : MonoBehaviour
 
                         movements.Movements -= 1;
 
-                        GameManager.Instance.UpdateGameState(GameState.BlueTurn);
-                        RedisPlaying = false;
+                        if (GameManager.Instance.BlueWon == true && GameManager.Instance.RedWon == false)
+                        {
+                            Debug.Log("BlueWon");
+
+                            GameManager.Instance.UpdateGameState(GameState.RedTurn);
+
+                        }
+                        else if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+                        {
+                            Debug.Log("Victoryy");
+                            GameManager.Instance.UpdateGameState(GameState.Victory);
+                        }
+                        else
+                        {
+                            GameManager.Instance.UpdateGameState(GameState.BlueTurn);
+                            RedisPlaying = false;
+                        }
+
+                       
                     }
                 }
             }
@@ -225,6 +242,13 @@ public class PlayerControllerRed : MonoBehaviour
             if (currentCube.GetComponent<Walkable>().finalRed == true)
             {
                 GameManager.Instance.RedWon = true;
+            }
+
+            if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+            {
+                Debug.Log("victory");
+                GameManager.Instance.UpdateGameState(GameState.Victory);
+
             }
 
             if (currentCube.GetComponent<Walkable>().isButton == true)
