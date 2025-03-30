@@ -12,6 +12,7 @@ public class BoardRotator : MonoBehaviour
     public GameObject leftArrow;
     public GameObject leftArrowPosition;
     public Animator animator;
+    public Animator camaraAnimator;
 
    
 
@@ -20,6 +21,7 @@ public class BoardRotator : MonoBehaviour
     void Start()
     {
         leftArrow.SetActive(false);
+        
        
     }
 
@@ -30,6 +32,7 @@ public class BoardRotator : MonoBehaviour
         {
             if (board.transform.eulerAngles.y == 0)
             {
+                camaraAnimator.SetBool("RotationCamara", true);
                 animator.SetBool("ReturnRight", false);
                 animator.SetBool("RotateRight", false);
                 animator.SetBool("RotateLeft", true);
@@ -37,6 +40,7 @@ public class BoardRotator : MonoBehaviour
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
                 // Instantiate(leftArrow, leftArrowPosition.transform.position, Quaternion.identity);
                 leftArrow.SetActive(true);
+                //camaraAnimator.SetBool("RotationCamara", false);
 
             }
             else if (board.transform.eulerAngles.y == 270)
@@ -82,7 +86,7 @@ public class BoardRotator : MonoBehaviour
 
     public void FinishAnimation()
     {
-        leftArrow.SetActive(false);
+        camaraAnimator.SetBool("RotationCamara", false);
     }
 }
 
