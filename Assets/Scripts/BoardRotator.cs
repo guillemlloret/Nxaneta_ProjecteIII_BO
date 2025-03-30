@@ -13,11 +13,14 @@ public class BoardRotator : MonoBehaviour
     public GameObject leftArrowPosition;
     public Animator animator;
 
+   
+
 
     // Start is called before the first frame update
     void Start()
     {
         leftArrow.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -66,12 +69,16 @@ public class BoardRotator : MonoBehaviour
             else
             {
                 animator.SetBool("RotateRight", true);
+                animator.SetBool("ReturnLeft", false);
+                animator.SetBool("ReturnRight", false);
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation_, transform.eulerAngles.z);
                 Debug.Log(board.transform.eulerAngles.y);
             }
 
         }
     }
+
+   
 
     public void FinishAnimation()
     {

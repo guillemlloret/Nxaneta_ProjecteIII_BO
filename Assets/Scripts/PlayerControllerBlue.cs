@@ -18,6 +18,9 @@ public class PlayerControllerBlue : MonoBehaviour
     public bool walking = false;
     public bool BlueisPlaying = false;
 
+    public GameObject paret;
+    public Animator animatorParet;
+
     [Space]
 
     public Transform currentCubeBlue;
@@ -39,7 +42,8 @@ public class PlayerControllerBlue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animatorParet = paret.GetComponent<Animator>();
+        animatorParet.SetBool("pujarParet", false);
     }
 
     // Update is called once per frame
@@ -65,8 +69,23 @@ public class PlayerControllerBlue : MonoBehaviour
                             FindPath();
                             movements.Movements -= 1;
 
-                            GameManager.Instance.UpdateGameState(GameState.RedTurn);
-                            BlueisPlaying = false;
+                            if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == false)
+                            {
+                                Debug.Log("RedWon");
+                                GameManager.Instance.UpdateGameState(GameState.BlueTurn);
+
+                            }
+                            else if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+                                {
+                                Debug.Log("Victoryy");
+                                GameManager.Instance.UpdateGameState(GameState.Victory);
+
+                                 }
+                            else 
+                                {
+                                    GameManager.Instance.UpdateGameState(GameState.RedTurn);
+                                    BlueisPlaying = false;
+                                }
                         }
                     }
                 
@@ -82,13 +101,19 @@ public class PlayerControllerBlue : MonoBehaviour
         
     }
 
+    public void FinishGame()
+    {
+
+    }
     public void ChooseTileBlue()
     {
         TurnText.text = "Blue".ToString();
         Debug.Log("Blue is going to play");
         //clickedCubeBlue = null;
         BlueisPlaying = true;
+        
         RayCastDown();
+
 
     }
 
@@ -217,10 +242,26 @@ public class PlayerControllerBlue : MonoBehaviour
             player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 1f;
             currentCubeBlue = finalPath[i];
 
+            if (currentCubeBlue.GetComponent<Walkable>().finalBlue == true)
+            {
+                GameManager.Instance.BlueWon = true;
+            }
+
             currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
         }
+        if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+        {
+            Debug.Log("victory");
+            GameManager.Instance.UpdateGameState(GameState.Victory);
 
-    
+        }
+        if (currentCubeBlue.GetComponent<Walkable>().isButton == true)
+        {
+            animatorParet.SetBool("pujarParet", true);
+        }
+        currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
+
+
         finalPath.Clear();
        
     

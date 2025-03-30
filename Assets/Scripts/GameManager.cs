@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState State;
 
+    public GameObject textVictoria;
+
+    public bool RedWon;
+    public bool BlueWon;
+
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -53,6 +58,7 @@ public class GameManager : MonoBehaviour
                 HandleDecide();
                 break;  
             case GameState.Victory:
+                HandleVictory();
                 break;
             case GameState.Lose:
                 break;
@@ -66,6 +72,7 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
     private void HandleDecide()
     {
 
@@ -82,6 +89,11 @@ public class GameManager : MonoBehaviour
         PlayerControllerBlue.Instance.ChooseTileBlue();
        
 
+    }
+    private void HandleVictory()
+    {
+
+        textVictoria.SetActive(true);
     }
 
 }

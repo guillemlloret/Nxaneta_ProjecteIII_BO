@@ -17,6 +17,9 @@ public class PlayerControllerRed : MonoBehaviour
     public bool walking = false;
     public bool RedisPlaying = false;
 
+    public GameObject paret;
+    public Animator animatorParet;
+
     [Space]
 
     public Transform currentCube;
@@ -39,7 +42,8 @@ public class PlayerControllerRed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+      animatorParet = paret.GetComponent<Animator>();
+        animatorParet.SetBool("pujarParet", false);
     }
 
    void Update()
@@ -218,10 +222,21 @@ public class PlayerControllerRed : MonoBehaviour
 
             currentCube = finalPath[i];
 
+            if (currentCube.GetComponent<Walkable>().finalRed == true)
+            {
+                GameManager.Instance.RedWon = true;
+            }
+
+            if (currentCube.GetComponent<Walkable>().isButton == true)
+            {
+                animatorParet.SetBool("pujarParet", true);
+            }
             currentCube.GetComponent<Walkable>().isOccupied = true;
 
             //currentCube.GetComponent<Walkable>().possiblePaths.Clear();
             Debug.Log(player.transform.position);
+
+
         }
 
         finalPath.Clear();
