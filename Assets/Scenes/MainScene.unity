@@ -612,6 +612,7 @@ MonoBehaviour:
   leftArrow: {fileID: 1214061537}
   leftArrowPosition: {fileID: 0}
   animator: {fileID: 1244240621}
+  camaraAnimator: {fileID: 2132721283}
 --- !u!1 &106771939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,7 +3423,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214061537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6d67957854558b84cb38e3707ed11169, type: 2}
   m_CullingMode: 0
@@ -5617,6 +5618,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2132721282}
   - component: {fileID: 2132721281}
+  - component: {fileID: 2132721283}
+  - component: {fileID: 2132721284}
   m_Layer: 0
   m_Name: GeneralCamera
   m_TagString: Untagged
@@ -5679,6 +5682,44 @@ Transform:
   - {fileID: 34619856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 49.351, y: -41.894, z: -7.886}
+--- !u!95 &2132721283
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132721280}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 466d37fdacc4f9543ab6623965d85bce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2132721284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132721280}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9987a4a0d59b724f9f5a0b4cb9fa144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board: {fileID: 1244240619}
+  leftArrow: {fileID: 1214061537}
+  leftArrowPosition: {fileID: 0}
+  animator: {fileID: 1244240621}
+  camaraAnimator: {fileID: 2132721283}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
