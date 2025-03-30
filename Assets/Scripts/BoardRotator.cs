@@ -45,6 +45,7 @@ public class BoardRotator : MonoBehaviour
             }
             else if (board.transform.eulerAngles.y == 270)
             {
+                camaraAnimator.SetBool("RotationCamara", true);
                 animator.SetBool("RotateRight", false);
                 animator.SetBool("ReturnLeft", true);
                 Debug.Log("-90");
@@ -63,6 +64,7 @@ public class BoardRotator : MonoBehaviour
         {
             if (board.transform.eulerAngles.y == 90)
             {
+                camaraAnimator.SetBool("RotationCamara", true);
                 animator.SetBool("RotateLeft", false);
                 animator.SetBool("ReturnLeft", false);
                 animator.SetBool("ReturnRight", true);
@@ -72,6 +74,7 @@ public class BoardRotator : MonoBehaviour
             }
             else
             {
+                camaraAnimator.SetBool("RotationCamara", true);
                 animator.SetBool("RotateRight", true);
                 animator.SetBool("ReturnLeft", false);
                 animator.SetBool("ReturnRight", false);

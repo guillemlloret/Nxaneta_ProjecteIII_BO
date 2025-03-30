@@ -491,6 +491,8 @@ MonoBehaviour:
   player: {fileID: 48324835}
   highlightMaterial: {fileID: 2100000, guid: 17e336aa9e2988348b56cd0d1f77fdfb, type: 2}
   regularMaterial: {fileID: 2100000, guid: 93018e738052ba649b691debaf1307cc, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 667432cf9dfa57045ae9106e35eb01d0, type: 2}
+  redMaterial: {fileID: 2100000, guid: 165234b35b2005d498c72bb58fbc4671, type: 2}
   walking: 0
   BlueisPlaying: 0
   paret: {fileID: 430803292}
@@ -3197,6 +3199,8 @@ MonoBehaviour:
   player: {fileID: 1016582293}
   highlightMaterial: {fileID: 2100000, guid: 17e336aa9e2988348b56cd0d1f77fdfb, type: 2}
   regularMaterial: {fileID: 2100000, guid: 93018e738052ba649b691debaf1307cc, type: 2}
+  redMaterial: {fileID: 2100000, guid: 165234b35b2005d498c72bb58fbc4671, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 667432cf9dfa57045ae9106e35eb01d0, type: 2}
   walking: 0
   RedisPlaying: 0
   paret: {fileID: 430803292}

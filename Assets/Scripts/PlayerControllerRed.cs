@@ -14,6 +14,8 @@ public class PlayerControllerRed : MonoBehaviour
     public GameObject player;
     public Material highlightMaterial;
     public Material regularMaterial;
+    public Material redMaterial;
+    public Material blueMaterial;
     public bool walking = false;
     public bool RedisPlaying = false;
 
@@ -159,7 +161,19 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock =currentCube;
-                path.cube.GetComponent<MeshRenderer>().material = regularMaterial;
+                if (path.cube.GetComponent<Walkable>().finalRed)
+                {
+                    path.cube.GetComponent<MeshRenderer>().material = redMaterial;
+                }
+                else if (path.cube.GetComponent<Walkable>().finalBlue)
+                {
+                    path.cube.GetComponent<MeshRenderer>().material = blueMaterial;
+                }
+                
+                else
+                {
+                    path.cube.GetComponent<MeshRenderer>().material = regularMaterial;
+                }
                 
                
 
