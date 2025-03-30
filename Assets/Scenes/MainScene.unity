@@ -2638,7 +2638,7 @@ MonoBehaviour:
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
-  isOccupied: 0
+  isOccupied: 1
   finalRed: 0
   finalBlue: 0
   walkPointOffset: 0.5
