@@ -6,6 +6,8 @@ public class BoardRotator : MonoBehaviour
 {
     public GameObject board;
 
+    [SerializeField] PointsHUD movements;
+
     float yRotation = 90.0f;
     float yRotation_ = -90.0f;
 
@@ -41,6 +43,7 @@ public class BoardRotator : MonoBehaviour
                 // Instantiate(leftArrow, leftArrowPosition.transform.position, Quaternion.identity);
                 leftArrow.SetActive(true);
                 //camaraAnimator.SetBool("RotationCamara", false);
+                movements.Movements -= 1;
 
             }
             else if (board.transform.eulerAngles.y == 270)
@@ -51,6 +54,9 @@ public class BoardRotator : MonoBehaviour
                 Debug.Log("-90");
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 leftArrow.SetActive(true);
+                movements.Movements -= 1;
+
+
             }
 
             else
@@ -71,6 +77,11 @@ public class BoardRotator : MonoBehaviour
                 Debug.Log("Hola");
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
                 Debug.Log(board.transform.eulerAngles.y);
+                movements.Movements -= 1;
+            }
+            else if (board.transform.eulerAngles.y == 270)
+            {
+
             }
             else
             {
@@ -80,6 +91,7 @@ public class BoardRotator : MonoBehaviour
                 animator.SetBool("ReturnRight", false);
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation_, transform.eulerAngles.z);
                 Debug.Log(board.transform.eulerAngles.y);
+                movements.Movements -= 1;
             }
 
         }

@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 1244240619}
+  movements: {fileID: 1404536638}
   leftArrow: {fileID: 1214061537}
   leftArrowPosition: {fileID: 0}
   animator: {fileID: 1244240621}
@@ -5720,6 +5721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 1244240619}
+  movements: {fileID: 0}
   leftArrow: {fileID: 1214061537}
   leftArrowPosition: {fileID: 0}
   animator: {fileID: 1244240621}
