@@ -10,8 +10,8 @@ public class ButtonsBegin_Script : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void OnQuitButton()
-    {
-        Application.Quit();
-    }
+    //public void OnQuitButton()
+    //{
+    //    Application.Quit();
+    //}
 }
