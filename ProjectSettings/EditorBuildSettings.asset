@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Structure_Duetto/Begin_Scene.unity
     guid: d9f482b59b507fb4685bf75815dbd2a5
   - enabled: 1
-    path: Assets/Scenes/Structure_Duetto/Load_Screen.unity
-    guid: 89a855fe7cc97f347861a3ad0b03624e
-  - enabled: 1
     path: Assets/Scenes/Structure_Duetto/LevelMenu_Screen.unity
     guid: 173336570aa7cd4419bfac7349d810b0
   - enabled: 1
