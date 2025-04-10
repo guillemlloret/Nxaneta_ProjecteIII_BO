@@ -17,11 +17,13 @@ public enum GameState
 }
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] PointsHUD movements;
 
     public static GameManager Instance;
     public GameState State;
 
     public GameObject textVictoria;
+    public GameObject textDerrota;
 
     public bool RedWon;
     public bool BlueWon;
@@ -33,7 +35,10 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;    
     }
-   
+   void Update()
+    {
+       
+    }
     void Start()
     {
         UpdateGameState(GameState.SelectColor);
@@ -61,6 +66,7 @@ public class GameManager : MonoBehaviour
                 HandleVictory();
                 break;
             case GameState.Lose:
+                HandleLose();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -94,6 +100,11 @@ public class GameManager : MonoBehaviour
     {
 
         textVictoria.SetActive(true);
+    }
+    private void HandleLose()
+    {
+
+        textDerrota.SetActive(true);
     }
 
 }

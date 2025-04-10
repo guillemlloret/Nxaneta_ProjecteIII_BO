@@ -270,6 +270,10 @@ public class PlayerControllerBlue : MonoBehaviour
             GameManager.Instance.UpdateGameState(GameState.Victory);
 
         }
+        if (movements.Movements == 1)
+        {
+            GameManager.Instance.UpdateGameState(GameState.Lose);
+        }
         if (currentCubeBlue.GetComponent<Walkable>().isButton == true)
         {
             animatorParet.SetBool("pujarParet", true);
