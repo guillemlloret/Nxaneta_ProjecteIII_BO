@@ -8,12 +8,15 @@ using UnityEngine.Rendering.Universal;
 
 public class Quit_PopUp : MonoBehaviour
 {
+    [SerializeField] private GameObject blurVolume;
     public GameObject Panel;
     public void OpenPanel()
     {
         if (Panel!=null)
         {
             Panel.SetActive(true);
+            blurVolume.SetActive(true);
+
         }
     }
 }
