@@ -254,7 +254,7 @@ public class PlayerControllerBlue : MonoBehaviour
 
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 1f;
+            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.75f;
             currentCubeBlue = finalPath[i];
 
             if (currentCubeBlue.GetComponent<Walkable>().finalBlue == true)
