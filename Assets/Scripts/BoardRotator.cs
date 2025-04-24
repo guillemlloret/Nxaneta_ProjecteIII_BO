@@ -11,8 +11,8 @@ public class BoardRotator : MonoBehaviour
     float yRotation = 90.0f;
     float yRotation_ = -90.0f;
 
-    public GameObject leftArrow;
-    public GameObject leftArrowPosition;
+    //public GameObject leftArrow;
+    //public GameObject leftArrowPosition;
     public Animator animator;
     public Animator camaraAnimator;
 
@@ -22,7 +22,7 @@ public class BoardRotator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        leftArrow.SetActive(false);
+        //leftArrow.SetActive(false);
         
        
     }
@@ -41,7 +41,7 @@ public class BoardRotator : MonoBehaviour
                
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
                 // Instantiate(leftArrow, leftArrowPosition.transform.position, Quaternion.identity);
-                leftArrow.SetActive(true);
+                //leftArrow.SetActive(true);
                 //camaraAnimator.SetBool("RotationCamara", false);
                 movements.Movements -= 1;
 
@@ -53,7 +53,7 @@ public class BoardRotator : MonoBehaviour
                 animator.SetBool("ReturnLeft", true);
                 Debug.Log("-90");
                 board.transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
-                leftArrow.SetActive(true);
+                //leftArrow.SetActive(true);
                 movements.Movements -= 1;
 
 
@@ -62,7 +62,7 @@ public class BoardRotator : MonoBehaviour
             else
             {
 
-                leftArrow.SetActive(true);
+                //leftArrow.SetActive(true);
             }
         }
 
