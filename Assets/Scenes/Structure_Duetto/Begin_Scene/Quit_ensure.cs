@@ -5,7 +5,9 @@ using UnityEngine;
 public class Quit_ensure : MonoBehaviour
 {
     [SerializeField] private GameObject blurVolume;
-    public GameObject Panel;
+    public GameObject QuitPanel;
+    public GameObject DarkPanel;
+
     public void Exit()
     {
         Application.Quit();
@@ -13,8 +15,9 @@ public class Quit_ensure : MonoBehaviour
     }
     public void StayInGame()
     {
-        Panel.SetActive(false);
-        blurVolume.SetActive(false);
+        QuitPanel.SetActive(false);
+        DarkPanel.SetActive(false);
+        //blurVolume.SetActive(false);
 
     }
 }
