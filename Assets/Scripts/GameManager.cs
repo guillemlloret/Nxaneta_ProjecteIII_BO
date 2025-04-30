@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 //using UnityEditor.VisionOS;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public enum GameState
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     public bool RedWon;
     public bool BlueWon;
+
+    public Image image;
 
 
     public static event Action<GameState> OnGameStateChanged;
@@ -87,13 +90,15 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Change state to red");
         PlayerControllerRed.Instance.ChooseTileRed();
+        image.GetComponent<Image>().color = new Color32(215, 42, 42, 255);
 
     }
     private  void HandleBlueTurn()
     {
         Debug.Log("Change state to blue");
         PlayerControllerBlue.Instance.ChooseTileBlue();
-       
+        image.GetComponent<Image>().color = new Color32(47, 57, 186, 255);
+
 
     }
     private void HandleVictory()

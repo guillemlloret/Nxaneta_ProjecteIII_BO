@@ -13,9 +13,11 @@ public class PlayerControllerRed : MonoBehaviour
     public static PlayerControllerRed Instance;
     public GameObject player;
     public Material highlightMaterial;
-    public Material regularMaterial;
-    public Material redMaterial;
-    public Material blueMaterial;
+    public  Material regularMaterial;
+    public  Material redMaterial;
+    public  Material blueMaterial;
+    public Material highlightMaterialRed;
+    public Material highlightMaterialBlue;
     public bool walking = false;
     public bool RedisPlaying = false;
 
@@ -141,9 +143,28 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 //Possibles caselles
                 Debug.Log(Possiblepath.target);
-                Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+
+                //fa be el debug del material
+                Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().material);
+
+                //Sempre entra nomes al primer bucle
+
+                //if (Possiblepath.cube.GetComponent<MeshRenderer>().material = redMaterial)
+                //{
+                //    Debug.Log("rojoH");
+
+                //    Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterialRed;
+                //}
+                if (Possiblepath.cube.GetComponent<MeshRenderer>().material = regularMaterial)
+                   {
+                    Debug.Log("regular");
+                    Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+                 }
+
+
+                
             }
-            
+
 
         }
     }
