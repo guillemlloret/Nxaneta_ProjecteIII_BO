@@ -5,6 +5,9 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 using System.IO;
+using System;
+
+
 
 public class PlayerControllerRed : MonoBehaviour
 {
@@ -22,12 +25,16 @@ public class PlayerControllerRed : MonoBehaviour
     public bool RedisPlaying = false;
 
     public GameObject paret;
+    public GameObject tutorialRotacio;
     public Animator animatorParet;
+    public CharacterController _characterController;
 
     [Space]
 
     public Transform currentCube;
     public Transform clickedCube;
+    public Transform targetPosition;
+    public float speed = 0.5f;
     public Transform nextCube;
     WalkPath finalCurrentCube;
     // public Transform indicator;
@@ -270,6 +277,11 @@ public class PlayerControllerRed : MonoBehaviour
         {
             Debug.Log("Follow");
             player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.75f;
+
+   
+           
+
+
             Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
 
             currentCube = finalPath[i];
@@ -289,10 +301,11 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 GameManager.Instance.UpdateGameState(GameState.Lose);
             }
-
+            //puja la paret
             if (currentCube.GetComponent<Walkable>().isButton == true)
             {
                 animatorParet.SetBool("pujarParet", true);
+                tutorialRotacio.SetActive(true);
             }
             currentCube.GetComponent<Walkable>().isOccupied = true;
 
@@ -307,6 +320,8 @@ public class PlayerControllerRed : MonoBehaviour
        
     }
 
+    
+
     //void Clear()
     //{
     //    foreach (Transform t in finalPath)
@@ -317,5 +332,5 @@ public class PlayerControllerRed : MonoBehaviour
     //    walking = false;
     //}
 
-   
+
 }
