@@ -25,8 +25,10 @@ public class PlayerControllerRed : MonoBehaviour
     public bool RedisPlaying = false;
 
     public GameObject paret;
+    public GameObject redWall;
     public GameObject tutorialRotacio;
     public Animator animatorParet;
+    public Animator animatorRedWall;
     public CharacterController _characterController;
 
     [Space]
@@ -54,6 +56,7 @@ public class PlayerControllerRed : MonoBehaviour
     void Start()
     {
       animatorParet = paret.GetComponent<Animator>();
+        animatorRedWall = redWall.GetComponent<Animator>();
         animatorParet.SetBool("pujarParet", false);
     }
 
@@ -306,6 +309,16 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 animatorParet.SetBool("pujarParet", true);
                 tutorialRotacio.SetActive(true);
+            }
+            if (currentCube.GetComponent<Walkable>().isButtonRed == true)
+            {
+                animatorRedWall.SetBool("Down", true);
+               
+            }
+            if (currentCube.GetComponent<Walkable>().isButtonRed == false)
+            {
+                animatorRedWall.SetBool("Down", false);
+
             }
             currentCube.GetComponent<Walkable>().isOccupied = true;
 

@@ -21,6 +21,8 @@ public class PlayerControllerBlue : MonoBehaviour
     public bool BlueisPlaying = false;
 
     public GameObject paret;
+    public GameObject BlueWall;
+    public Animator animatorBlueWall;
     public Animator animatorParet;
 
     [Space]
@@ -45,6 +47,7 @@ public class PlayerControllerBlue : MonoBehaviour
     void Start()
     {
         animatorParet = paret.GetComponent<Animator>();
+        animatorBlueWall = BlueWall.GetComponent<Animator>();
         animatorParet.SetBool("pujarParet", false);
     }
 
@@ -277,6 +280,17 @@ public class PlayerControllerBlue : MonoBehaviour
         if (currentCubeBlue.GetComponent<Walkable>().isButton == true)
         {
             animatorParet.SetBool("pujarParet", true);
+        }
+
+        if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
+        {
+            animatorBlueWall.SetBool("BlueDown", true);
+
+        }
+        if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == false)
+        {
+            animatorBlueWall.SetBool("BlueDown", false);
+
         }
         currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
 

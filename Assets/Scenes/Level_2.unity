@@ -157,11 +157,11 @@ Transform:
   m_GameObject: {fileID: 8834971}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.825, y: 1.39, z: 0.25}
-  m_LocalScale: {x: 1.6452942, y: 1.0460923, z: 0.049569264}
+  m_LocalPosition: {x: 2.47435, y: 0.4614892, z: -0.4982947}
+  m_LocalScale: {x: 1.9483846, y: 1.2387997, z: 0.058700748}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1156174369}
+  m_Father: {fileID: 1554685771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8834973
 BoxCollider:
@@ -602,7 +602,9 @@ MonoBehaviour:
   walking: 0
   BlueisPlaying: 0
   paret: {fileID: 0}
-  animatorParet: {fileID: 0}
+  BlueWall: {fileID: 1567921890}
+  animatorBlueWall: {fileID: 1567921895}
+  animatorParet: {fileID: 1567921895}
   currentCubeBlue: {fileID: 0}
   clickedCubeBlue: {fileID: 0}
   finalCube:
@@ -780,7 +782,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.99, y: 0.61, z: 0}
-  m_LocalScale: {x: 0.69056, y: 1.301, z: 4.455873}
+  m_LocalScale: {x: 0.69056, y: 2.2551534, z: 4.455873}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1554685771}
@@ -1490,7 +1492,7 @@ MonoBehaviour:
   isButton: 0
   isOccupied: 0
   finalRed: 0
-  finalBlue: 1
+  finalBlue: 0
   isButtonRed: 0
   isButtonBlue: 0
   walkPointOffset: 0.01
@@ -5937,8 +5939,10 @@ MonoBehaviour:
   walking: 0
   RedisPlaying: 0
   paret: {fileID: 0}
+  redWall: {fileID: 8834971}
   tutorialRotacio: {fileID: 145072091}
-  animatorParet: {fileID: 0}
+  animatorParet: {fileID: 8834976}
+  animatorRedWall: {fileID: 8834976}
   _characterController: {fileID: 0}
   currentCube: {fileID: 0}
   clickedCube: {fileID: 0}
@@ -6287,7 +6291,6 @@ Transform:
   m_Children:
   - {fileID: 654489677}
   - {fileID: 1244240620}
-  - {fileID: 8834972}
   - {fileID: 1842972872}
   - {fileID: 832575519}
   - {fileID: 450602063}
@@ -7927,11 +7930,12 @@ Transform:
   - {fileID: 813485834}
   - {fileID: 1743761860}
   - {fileID: 1922592277}
+  - {fileID: 1567921891}
   - {fileID: 1838373557}
   - {fileID: 115864322}
-  - {fileID: 1567921891}
   - {fileID: 2107529507}
   - {fileID: 1544681893}
+  - {fileID: 8834972}
   m_Father: {fileID: 1244240620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567921890
@@ -7946,6 +7950,7 @@ GameObject:
   - component: {fileID: 1567921894}
   - component: {fileID: 1567921893}
   - component: {fileID: 1567921892}
+  - component: {fileID: 1567921895}
   m_Layer: 0
   m_Name: blueWall
   m_TagString: Untagged
@@ -7961,9 +7966,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567921890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 0.581, z: 1.485}
-  m_LocalScale: {x: 2.043446, y: 1.2388, z: 0.058700755}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.34999996, y: 0.58099985, z: 1.4850001}
+  m_LocalScale: {x: 2.043446, y: 1.2387999, z: 0.05870075}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1554685771}
@@ -8039,6 +8044,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567921890}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1567921895
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567921890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ccfcc574bc011849826380eba2b4c7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1569347817
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,7 +8530,7 @@ MonoBehaviour:
   isStair: 0
   isButton: 0
   isOccupied: 1
-  finalRed: 1
+  finalRed: 0
   finalBlue: 0
   isButtonRed: 0
   isButtonBlue: 0
