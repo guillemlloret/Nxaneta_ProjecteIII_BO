@@ -75,7 +75,7 @@ public class PlayerControllerRed : MonoBehaviour
                 foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
                 {
                     Debug.Log("WalkPath");
-                    if (Possiblepath.target == clickedCube  && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+                    if (Possiblepath.target == clickedCube && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
                     {
 
                         Debug.Log("Findpath in ");

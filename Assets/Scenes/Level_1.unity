@@ -475,6 +475,9 @@ MonoBehaviour:
   walking: 0
   BlueisPlaying: 0
   paret: {fileID: 430803292}
+  BlueWall: {fileID: 1214061537}
+  animatorBlueWall: {fileID: 1214061538}
+  FrontWallBlue: 0
   animatorParet: {fileID: 430803297}
   currentCubeBlue: {fileID: 0}
   clickedCubeBlue: {fileID: 0}
@@ -1085,6 +1088,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &173891507
@@ -2071,6 +2078,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &464507714
@@ -2927,6 +2938,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &629897426
@@ -3387,6 +3402,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &711877957
@@ -4110,6 +4129,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &746538081
@@ -4347,6 +4370,10 @@ MonoBehaviour:
   isOccupied: 1
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &817561325
@@ -4852,6 +4879,10 @@ MonoBehaviour:
   isOccupied: 1
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &856025068
@@ -5273,6 +5304,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &1009371583
@@ -5409,8 +5444,11 @@ MonoBehaviour:
   walking: 0
   RedisPlaying: 0
   paret: {fileID: 430803292}
+  redWall: {fileID: 1214061537}
+  FrontWallRed: 0
   tutorialRotacio: {fileID: 145072091}
   animatorParet: {fileID: 430803297}
+  animatorRedWall: {fileID: 1214061538}
   _characterController: {fileID: 1016582296}
   currentCube: {fileID: 0}
   clickedCube: {fileID: 0}
@@ -5679,6 +5717,8 @@ MonoBehaviour:
   image: {fileID: 1200720134}
   red_Sprite: {fileID: 21300000, guid: 0ee72ffe0b66cc245a70eda89cc93e34, type: 3}
   blue_Sprite: {fileID: 21300000, guid: 61f5bc5a417f7394bb61aa3e95cd91f7, type: 3}
+  RedOpen: 0
+  BlueOpen: 0
 --- !u!1 &1116808503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6939,6 +6979,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 1
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1453453908
@@ -7306,6 +7350,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &1578854353
@@ -7386,6 +7434,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1585608144
@@ -7620,6 +7672,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 1
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1675211801
@@ -8732,6 +8788,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1922592279
@@ -9209,6 +9269,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1001 &1972031338
@@ -9837,6 +9901,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &2051077881
@@ -10296,6 +10364,10 @@ MonoBehaviour:
   isOccupied: 0
   finalRed: 0
   finalBlue: 0
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &2132721280
