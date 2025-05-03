@@ -270,7 +270,7 @@ public class PlayerControllerBlue : MonoBehaviour
             GameManager.Instance.UpdateGameState(GameState.Victory);
 
         }
-        if (movements.Movements == 1)
+        if (movements.Movements <= 1)
         {
             GameManager.Instance.UpdateGameState(GameState.Lose);
         }

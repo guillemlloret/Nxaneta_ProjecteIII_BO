@@ -5677,8 +5677,8 @@ MonoBehaviour:
   RedWon: 0
   BlueWon: 0
   image: {fileID: 1200720134}
-  red_Sprite: {fileID: 21300000, guid: 56ee4c984b2463d488e822c779ef98e9, type: 3}
-  blue_Sprite: {fileID: 21300000, guid: 6ae2898ea5040854188f1751f6a66fcc, type: 3}
+  red_Sprite: {fileID: 21300000, guid: 0ee72ffe0b66cc245a70eda89cc93e34, type: 3}
+  blue_Sprite: {fileID: 21300000, guid: 61f5bc5a417f7394bb61aa3e95cd91f7, type: 3}
 --- !u!1 &1116808503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6101,14 +6101,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78800285, g: 0.79456705, b: 0.8792453, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 56ee4c984b2463d488e822c779ef98e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ee72ffe0b66cc245a70eda89cc93e34, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6814,10 +6814,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enhorabona! Has superat el tutorial
+  m_text: Nivell superat
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 40589f7a3475ed24580c38ee49844de5, type: 2}
+  m_sharedMaterial: {fileID: 8804246965532245945, guid: 40589f7a3475ed24580c38ee49844de5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6848,7 +6849,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

@@ -90,7 +90,7 @@ public class PlayerControllerRed : MonoBehaviour
                         }
                         else if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
                         {
-                            Debug.Log("Victoryy");
+                            Debug.Log("Victory");
                             GameManager.Instance.UpdateGameState(GameState.Victory);
                         }
                         else
@@ -297,7 +297,7 @@ public class PlayerControllerRed : MonoBehaviour
                 GameManager.Instance.UpdateGameState(GameState.Victory);
 
             }
-            if (movements.Movements == 1)
+            if (movements.Movements <= 1)
             {
                 GameManager.Instance.UpdateGameState(GameState.Lose);
             }
