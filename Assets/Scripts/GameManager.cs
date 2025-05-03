@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     public Sprite red_Sprite;
     public Sprite blue_Sprite;
 
+    public bool RedOpen = false;
+    public bool BlueOpen = false;
+
 
     public static event Action<GameState> OnGameStateChanged;
 

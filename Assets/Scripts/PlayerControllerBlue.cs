@@ -23,6 +23,7 @@ public class PlayerControllerBlue : MonoBehaviour
     public GameObject paret;
     public GameObject BlueWall;
     public Animator animatorBlueWall;
+    public bool FrontWallBlue = false;
     public Animator animatorParet;
 
     [Space]
@@ -56,6 +57,7 @@ public class PlayerControllerBlue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && BlueisPlaying)
         {
+            
             Debug.Log("input blue");
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
@@ -67,7 +69,7 @@ public class PlayerControllerBlue : MonoBehaviour
                 {
         
                     
-                        if (Possiblepath.target == clickedCubeBlue)
+                        if (Possiblepath.target == clickedCubeBlue && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
                         {
 
                             currentCubeBlue.GetComponent<Walkable>().isOccupied = false;
@@ -148,6 +150,20 @@ public class PlayerControllerBlue : MonoBehaviour
                 CubeWalkable.MakeOccupied(CubeWalkable);
                 currentCubeBlue.GetComponent <Walkable>().isOccupied = true;
             }
+        }
+        if (GameManager.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
+        {
+            
+
+            currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
+
+        }
+        if (GameManager.Instance.RedOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
+        {
+            //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
+
+            currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+
         }
 
         foreach (WalkPath Possiblepath in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
@@ -257,7 +273,7 @@ public class PlayerControllerBlue : MonoBehaviour
 
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.75f;
+            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.6f;
             currentCubeBlue = finalPath[i];
 
             if (currentCubeBlue.GetComponent<Walkable>().finalBlue == true)
@@ -285,8 +301,11 @@ public class PlayerControllerBlue : MonoBehaviour
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
         {
             animatorBlueWall.SetBool("BlueDown", true);
+            
 
         }
+
+       
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == false)
         {
             animatorBlueWall.SetBool("BlueDown", false);

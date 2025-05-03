@@ -26,6 +26,7 @@ public class PlayerControllerRed : MonoBehaviour
 
     public GameObject paret;
     public GameObject redWall;
+    public bool FrontWallRed = false;
     public GameObject tutorialRotacio;
     public Animator animatorParet;
     public Animator animatorRedWall;
@@ -313,11 +314,14 @@ public class PlayerControllerRed : MonoBehaviour
             if (currentCube.GetComponent<Walkable>().isButtonRed == true)
             {
                 animatorRedWall.SetBool("Down", true);
+                GameManager.Instance.RedOpen = true;
                
             }
+           
             if (currentCube.GetComponent<Walkable>().isButtonRed == false)
             {
                 animatorRedWall.SetBool("Down", false);
+                GameManager.Instance.RedOpen = false;
 
             }
             currentCube.GetComponent<Walkable>().isOccupied = true;

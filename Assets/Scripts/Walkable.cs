@@ -26,6 +26,8 @@ public class Walkable : MonoBehaviour
     [Header("level2")]
     public bool isButtonRed = false;
     public bool isButtonBlue = false;
+    public bool FrontWallBlue = false;
+    public bool FrontWallRed = false;
 
 
 
