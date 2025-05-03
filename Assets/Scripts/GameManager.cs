@@ -16,6 +16,8 @@ public enum GameState
     Victory,
     Lose
 }
+
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] PointsHUD movements;
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
     public bool BlueWon;
 
     public Image image;
+    public Sprite red_Sprite;
+    public Sprite blue_Sprite;
 
 
     public static event Action<GameState> OnGameStateChanged;
@@ -90,14 +94,14 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Change state to red");
         PlayerControllerRed.Instance.ChooseTileRed();
-        image.GetComponent<Image>().color = new Color32(215, 42, 42, 255);
+        image.GetComponent<Image>().sprite = red_Sprite;
 
     }
     private  void HandleBlueTurn()
     {
         Debug.Log("Change state to blue");
         PlayerControllerBlue.Instance.ChooseTileBlue();
-        image.GetComponent<Image>().color = new Color32(47, 57, 186, 255);
+        image.GetComponent<Image>().sprite= blue_Sprite;
 
 
     }
