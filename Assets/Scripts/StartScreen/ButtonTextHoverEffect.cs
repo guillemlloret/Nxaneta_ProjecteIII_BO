@@ -7,9 +7,9 @@ public class ButtonTextHoverEffect : MonoBehaviour, IPointerEnterHandler, IPoint
 {
     
     public TextMeshProUGUI tmpText; 
-    [Header("Hex Colors (e.g. #FFFFFF)")]
+    [Header("Hex Colors (e.g. #222222)")]
     public string normalColorHex = "#B0B0B0"; // gris
-    public string hoverColorHex = "#FFFFFF"; // blanco
+    public string hoverColorHex = "#222222"; // negro
 
     private Color normalColor;
     private Color hoverColor;
