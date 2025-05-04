@@ -26,10 +26,13 @@ public class TutorialManager : MonoBehaviour
     private bool isTyping = false;
     private Coroutine typingCoroutine;
 
+    public GameObject StartGame;
+
     public float typingSpeed = 0.05f; // Velocitat de la màquina d'escriure
 
     void Start()
     {
+        StartGame.SetActive(false);
         tutorialPanel.SetActive(true);
         ShowCurrentMessage();
         nextButton.onClick.AddListener(NextMessage);
@@ -92,6 +95,7 @@ public class TutorialManager : MonoBehaviour
             if (currentMessageIndex >= tutorialMessages.Length)
             {
                 tutorialPanel.SetActive(false);
+                StartGame.SetActive(true);
                 Time.timeScale = 1f; // Reprèn el joc
             }
             else
