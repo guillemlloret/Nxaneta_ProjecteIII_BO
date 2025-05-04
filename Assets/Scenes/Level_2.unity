@@ -5738,24 +5738,24 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2001991735}
     occupied: 0
-  - target: {fileID: 1453453911}
-    active: 1
-    cube: {fileID: 1453453906}
-    occupied: 0
   - target: {fileID: 2122829806}
     active: 1
     cube: {fileID: 2122829805}
+    occupied: 0
+  - target: {fileID: 1453453911}
+    active: 1
+    cube: {fileID: 1453453906}
     occupied: 0
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
   isOccupied: 0
-  finalRed: 0
-  finalBlue: 1
+  finalRed: 1
+  finalBlue: 0
   isButtonRed: 0
   isButtonBlue: 0
   FrontWallBlue: 0
-  FrontWallRed: 0
+  FrontWallRed: 1
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1006733337
@@ -5961,6 +5961,7 @@ MonoBehaviour:
   highlightMaterialBlue: {fileID: 0}
   walking: 0
   RedisPlaying: 0
+  blurEffect: {fileID: 0}
   paret: {fileID: 0}
   redWall: {fileID: 8834971}
   FrontWallRed: 0
@@ -6881,7 +6882,7 @@ Transform:
   m_GameObject: {fileID: 1244240619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26444, y: 1.0003, z: 0.67078}
+  m_LocalPosition: {x: 0.53, y: 1, z: 0.68}
   m_LocalScale: {x: 0.84444, y: 0.84444, z: 0.84444}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7617,11 +7618,11 @@ MonoBehaviour:
   isButton: 0
   isOccupied: 0
   finalRed: 0
-  finalBlue: 1
+  finalBlue: 0
   isButtonRed: 0
   isButtonBlue: 0
   FrontWallBlue: 0
-  FrontWallRed: 0
+  FrontWallRed: 1
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1453453908
@@ -7930,8 +7931,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554685770}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9407891, y: 0.00035532398, z: -0.010918554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10448,6 +10449,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2029493280}
     occupied: 0
+  - target: {fileID: 0}
+    active: 0
+    cube: {fileID: 0}
+    occupied: 0
   - target: {fileID: 1006733335}
     active: 1
     cube: {fileID: 1006733334}
@@ -10461,7 +10466,7 @@ MonoBehaviour:
   isButtonRed: 0
   isButtonBlue: 0
   FrontWallBlue: 0
-  FrontWallRed: 0
+  FrontWallRed: 1
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &2001991738
@@ -10944,13 +10949,13 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 2001991736}
-    active: 1
-    cube: {fileID: 2001991735}
-    occupied: 0
   - target: {fileID: 1453453911}
     active: 1
     cube: {fileID: 1453453906}
+    occupied: 0
+  - target: {fileID: 2001991736}
+    active: 1
+    cube: {fileID: 2001991735}
     occupied: 0
   previousBlock: {fileID: 0}
   isStair: 0
@@ -10961,7 +10966,7 @@ MonoBehaviour:
   isButtonRed: 0
   isButtonBlue: 0
   FrontWallBlue: 0
-  FrontWallRed: 0
+  FrontWallRed: 1
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &2029493283

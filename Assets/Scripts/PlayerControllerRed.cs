@@ -6,6 +6,7 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 using System;
+using UnityEngine.Rendering;
 
 
 
@@ -23,6 +24,7 @@ public class PlayerControllerRed : MonoBehaviour
     public Material highlightMaterialBlue;
     public bool walking = false;
     public bool RedisPlaying = false;
+    public GameObject blurEffect;
 
     public GameObject paret;
     public GameObject redWall;
@@ -145,8 +147,23 @@ public class PlayerControllerRed : MonoBehaviour
             }
         }
 
-        
-        
+        if (GameManager.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)
+        {
+
+
+            currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
+
+        }
+        if (GameManager.Instance.BlueOpen == true && currentCube.GetComponent<Walkable>().FrontWallRed == true)
+        {
+            //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
+
+            currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+
+        }
+
+
+
 
         foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
         {
@@ -310,6 +327,7 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 animatorParet.SetBool("pujarParet", true);
                 tutorialRotacio.SetActive(true);
+                blurEffect.SetActive(true);
             }
             if (currentCube.GetComponent<Walkable>().isButtonRed == true)
             {

@@ -301,7 +301,7 @@ public class PlayerControllerBlue : MonoBehaviour
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
         {
             animatorBlueWall.SetBool("BlueDown", true);
-            
+            GameManager.Instance.BlueOpen = true;
 
         }
 
@@ -309,6 +309,7 @@ public class PlayerControllerBlue : MonoBehaviour
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == false)
         {
             animatorBlueWall.SetBool("BlueDown", false);
+            GameManager.Instance.BlueOpen = false;
 
         }
         currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
