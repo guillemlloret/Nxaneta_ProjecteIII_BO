@@ -19,9 +19,11 @@ public class PlayerControllerBlue : MonoBehaviour
     public Material redMaterial;
     public bool walking = false;
     public bool BlueisPlaying = false;
+    public GameObject blurEffect;
 
     public GameObject paret;
     public GameObject BlueWall;
+    public GameObject tutorialRotacio;
     public Animator animatorBlueWall;
     public bool FrontWallBlue = false;
     public Animator animatorParet;
@@ -296,6 +298,8 @@ public class PlayerControllerBlue : MonoBehaviour
         if (currentCubeBlue.GetComponent<Walkable>().isButton == true)
         {
             animatorParet.SetBool("pujarParet", true);
+            tutorialRotacio.SetActive(true);
+            blurEffect.SetActive(true);
         }
 
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
