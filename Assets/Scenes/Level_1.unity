@@ -499,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 48324835}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9652717, y: 0.38489807, z: -1.4474316}
+  m_LocalPosition: {x: 0.9652717, y: 0.496, z: -1.4474316}
   m_LocalScale: {x: 0.81615, y: 0.81615, z: 0.81615}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2947,7 +2947,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 165234b35b2005d498c72bb58fbc4671, type: 2}
+  - {fileID: 2100000, guid: 74f564ef1821e964eb350022f7e48ddf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2976,7 +2976,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556389428}
-  m_Mesh: {fileID: 4864056309639282896, guid: 439b7afab2b086a429b58fa4c2c80e68, type: 3}
+  m_Mesh: {fileID: 1352589823274332328, guid: 1f9f8f053b9c58d4e8001e3847e13b17, type: 3}
 --- !u!1001 &569483814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4946,7 +4946,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 667432cf9dfa57045ae9106e35eb01d0, type: 2}
+  - {fileID: 2100000, guid: 94eab8ac5626ab34a9278cb5b9a401c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4975,7 +4975,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817561325}
-  m_Mesh: {fileID: 4864056309639282896, guid: 439b7afab2b086a429b58fa4c2c80e68, type: 3}
+  m_Mesh: {fileID: 1352589823274332328, guid: 1f9f8f053b9c58d4e8001e3847e13b17, type: 3}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5912,7 +5912,7 @@ Transform:
   m_GameObject: {fileID: 1016582293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03472829, y: 0.38489807, z: -1.4474316}
+  m_LocalPosition: {x: -0.03472829, y: 0.49, z: -1.4474316}
   m_LocalScale: {x: 0.81615, y: 0.81615, z: 0.81615}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8956,7 +8956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1805353390
 MonoBehaviour:
   m_ObjectHideFlags: 0

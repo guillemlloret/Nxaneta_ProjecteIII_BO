@@ -297,7 +297,7 @@ public class PlayerControllerRed : MonoBehaviour
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
             Debug.Log("Follow");
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.60f;
+            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.70f;
 
    
            
