@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class UnitManager : MonoBehaviour
 {
     public static UnitManager Instance;
-
+    public GameObject TurnTutorial;
     void Awake()
     {
         Instance = this;
@@ -18,5 +18,6 @@ public class UnitManager : MonoBehaviour
     {
         Debug.Log("start");
         GameManager.Instance.UpdateGameState(GameState.RedTurn);
+        TurnTutorial.SetActive(true);
     }
 }
