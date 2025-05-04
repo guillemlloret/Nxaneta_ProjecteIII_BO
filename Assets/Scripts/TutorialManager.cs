@@ -8,6 +8,8 @@ public class TutorialManager : MonoBehaviour
     public GameObject tutorialPanel;
     public TextMeshProUGUI tutorialText;
     public Button nextButton;
+    public GameObject movementsAvailable;
+    public GameObject movementsHighlight;
 
     private string[] tutorialMessages = {
 
@@ -82,6 +84,11 @@ public class TutorialManager : MonoBehaviour
         {
             currentMessageIndex++;
 
+            if (currentMessageIndex == 3)
+            {
+                movementsAvailable.SetActive(true);
+                movementsHighlight.SetActive(true); 
+            }
             if (currentMessageIndex >= tutorialMessages.Length)
             {
                 tutorialPanel.SetActive(false);
