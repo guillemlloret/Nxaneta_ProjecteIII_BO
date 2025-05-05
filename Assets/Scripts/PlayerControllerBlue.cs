@@ -17,6 +17,8 @@ public class PlayerControllerBlue : MonoBehaviour
     public Material regularMaterial;
     public Material blueMaterial;
     public Material redMaterial;
+    public Material highlightMaterialRed;
+    public Material highlightMaterialBlue;
     public bool walking = false;
     public bool BlueisPlaying = false;
     public GameObject blurEffect;
@@ -174,7 +176,23 @@ public class PlayerControllerBlue : MonoBehaviour
             {
                 //Possibles caselles
                 Debug.Log(Possiblepath.target);
-                Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+                if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
+                {
+                    Debug.Log("regular");
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
+                }
+                else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
+                {
+                    //    Debug.Log("rojoH");
+
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
+                }
+                else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
+                {
+                    Debug.Log("blueH");
+
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
+                }
             }
 
         }

@@ -173,24 +173,31 @@ public class PlayerControllerRed : MonoBehaviour
                 Debug.Log(Possiblepath.target);
 
                 //fa be el debug del material
-                Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().material);
+                Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial);
 
                 //Sempre entra nomes al primer bucle
 
-                //if (Possiblepath.cube.GetComponent<MeshRenderer>().material = redMaterial)
-                //{
-                //    Debug.Log("rojoH");
-
-                //    Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterialRed;
-                //}
-                if (Possiblepath.cube.GetComponent<MeshRenderer>().material = regularMaterial)
+                
+                if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
                    {
                     Debug.Log("regular");
-                    Possiblepath.cube.GetComponent<MeshRenderer>().material = highlightMaterial;
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
                  }
+                else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
+                {
+                    //    Debug.Log("rojoH");
+
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
+                }
+                else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
+                {
+                        Debug.Log("blueH");
+
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
+                }
 
 
-                
+
             }
 
 
