@@ -3310,7 +3310,9 @@ MonoBehaviour:
   m_text: '
 
 
-    Use Q and E to rotate de board'
+    Use Q and E to rotate de board
+
+    (-1 movement)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40589f7a3475ed24580c38ee49844de5, type: 2}
   m_sharedMaterial: {fileID: 8804246965532245945, guid: 40589f7a3475ed24580c38ee49844de5,
@@ -4209,7 +4211,7 @@ MonoBehaviour:
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
-  isOccupied: 0
+  isOccupied: 1
   finalRed: 0
   finalBlue: 0
   isButtonRed: 0
@@ -10942,7 +10944,7 @@ MonoBehaviour:
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
-  isOccupied: 0
+  isOccupied: 1
   finalRed: 0
   finalBlue: 0
   isButtonRed: 0

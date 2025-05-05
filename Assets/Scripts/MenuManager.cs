@@ -37,4 +37,8 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void RetryScene2()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
