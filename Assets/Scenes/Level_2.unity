@@ -599,6 +599,10 @@ MonoBehaviour:
   regularMaterial: {fileID: 2100000, guid: 75475174efeda8146a1600e7ab1aea22, type: 2}
   blueMaterial: {fileID: 2100000, guid: 494754d6e06d7f648849d6ac940e5aaa, type: 2}
   redMaterial: {fileID: 2100000, guid: 7fc204f9558accb4999ec9b94bcb9bc7, type: 2}
+  highlightMaterialRed: {fileID: 2100000, guid: 97d24f456cb32f74b942fc06c9bf64a3,
+    type: 2}
+  highlightMaterialBlue: {fileID: 2100000, guid: 465647f0b01e6924882af4d9137a39b3,
+    type: 2}
   walking: 0
   BlueisPlaying: 0
   blurEffect: {fileID: 0}
@@ -6536,7 +6540,8 @@ MonoBehaviour:
   blueMaterial: {fileID: 2100000, guid: 494754d6e06d7f648849d6ac940e5aaa, type: 2}
   highlightMaterialRed: {fileID: 2100000, guid: 97d24f456cb32f74b942fc06c9bf64a3,
     type: 2}
-  highlightMaterialBlue: {fileID: 0}
+  highlightMaterialBlue: {fileID: 2100000, guid: 465647f0b01e6924882af4d9137a39b3,
+    type: 2}
   walking: 0
   RedisPlaying: 0
   blurEffect: {fileID: 0}
