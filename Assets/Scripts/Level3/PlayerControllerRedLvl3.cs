@@ -13,7 +13,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 {
     [SerializeField] PointsHUD movements;
     [SerializeField] TMP_Text TurnText;
-    public static PlayerControllerRed Instance;
+    public static PlayerControllerRed2 Instance;
     public GameObject player;
     public Material highlightMaterial;
     public Material regularMaterial;
@@ -51,7 +51,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 
     void Awake()
     {
-        //Instance = this;
+        Instance = this;
     }
 
     // Start is called before the first frame update
@@ -77,25 +77,25 @@ public class PlayerControllerRed2 : MonoBehaviour
                         Debug.Log("Findpath in ");
                         currentCube.GetComponent<Walkable>().isOccupied = false;
 
-                        FindPath2();
+                        FindPath();
 
                         movements.Movements -= 1;
 
-                        if (GameManager.Instance.BlueWon == true && GameManager.Instance.RedWon == false)
+                        if (GameManagerLvl3.Instance.BlueWon == true && GameManagerLvl3.Instance.RedWon == false)
                         {
                             Debug.Log("BlueWon");
 
-                            GameManager.Instance.UpdateGameState(GameState.RedTurn);
+                            GameManagerLvl3.Instance.UpdateGameState(GameState2.RedTurn);
 
                         }
-                        else if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+                        else if (GameManagerLvl3.Instance.RedWon == true && GameManagerLvl3.Instance.BlueWon == true)
                         {
                             Debug.Log("Victory");
-                            GameManager.Instance.UpdateGameState(GameState.Victory);
+                            GameManagerLvl3.Instance.UpdateGameState(GameState2.Victory);
                         }
                         else
                         {
-                            GameManager.Instance.UpdateGameState(GameState.BlueTurn);
+                            GameManagerLvl3.Instance.UpdateGameState(GameState2.BlueTurn);
                             RedisPlaying = false;
                         }
 
@@ -112,18 +112,18 @@ public class PlayerControllerRed2 : MonoBehaviour
 
     }
 
-    public void ChooseTileRed2()
+    public void ChooseTileRed()
     {
         TurnText.text = "Red".ToString();
         Debug.Log("Red is going to play");
 
         RedisPlaying = true;
-        RayCastDown2();
+        RayCastDown();
 
     }
 
 
-    public void RayCastDown2()
+    public void RayCastDown()
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
@@ -141,14 +141,14 @@ public class PlayerControllerRed2 : MonoBehaviour
             }
         }
 
-        if (GameManager.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)
+        if (GameManagerLvl3.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)
         {
 
 
             currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
 
         }
-        if (GameManager.Instance.BlueOpen == true && currentCube.GetComponent<Walkable>().FrontWallRed == true)
+        if (GameManagerLvl3.Instance.BlueOpen == true && currentCube.GetComponent<Walkable>().FrontWallRed == true)
         {
             //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
 
@@ -198,7 +198,7 @@ public class PlayerControllerRed2 : MonoBehaviour
         }
     }
 
-    void FindPath2()
+    void FindPath()
     {
         Debug.Log("Find");
         List<Transform> nextCubes = new List<Transform>();
@@ -232,14 +232,14 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         pastCubes.Add(currentCube);
 
-        ExploreCube2(nextCubes, pastCubes);
-        BuildPath2();
+        ExploreCube(nextCubes, pastCubes);
+        BuildPath();
 
 
 
     }
 
-    void ExploreCube2(List<Transform> nextCubes, List<Transform> visitedCubes)
+    void ExploreCube(List<Transform> nextCubes, List<Transform> visitedCubes)
     {
         Debug.Log("Explore");
         Transform current = nextCubes.First();
@@ -264,12 +264,12 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         if (nextCubes.Any())
         {
-            ExploreCube2(nextCubes, visitedCubes);
+            ExploreCube(nextCubes, visitedCubes);
         }
 
     }
 
-    void BuildPath2()
+    void BuildPath()
     {
         Debug.Log("Build");
         Transform cube = clickedCube;
@@ -287,10 +287,10 @@ public class PlayerControllerRed2 : MonoBehaviour
             }
         }
 
-        FollowPath2();
+        FollowPath();
     }
 
-    void FollowPath2()
+    void FollowPath()
     {
 
         walking = true;
@@ -298,7 +298,7 @@ public class PlayerControllerRed2 : MonoBehaviour
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
             Debug.Log("Follow");
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.70f;
+            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
 
 
 
@@ -310,37 +310,37 @@ public class PlayerControllerRed2 : MonoBehaviour
 
             if (currentCube.GetComponent<Walkable>().finalRed == true)
             {
-                GameManager.Instance.RedWon = true;
+                GameManagerLvl3.Instance.RedWon = true;
             }
 
-            if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+            if (GameManagerLvl3.Instance.RedWon == true && GameManagerLvl3.Instance.BlueWon == true)
             {
                 Debug.Log("victory");
-                GameManager.Instance.UpdateGameState(GameState.Victory);
+                GameManagerLvl3.Instance.UpdateGameState(GameState2.Victory);
 
             }
             if (movements.Movements <= 1)
             {
-                GameManager.Instance.UpdateGameState(GameState.Lose);
+                GameManagerLvl3.Instance.UpdateGameState(GameState2.Lose);
             }
             //puja la paret
             if (currentCube.GetComponent<Walkable>().isButton == true)
             {
-                animatorParet.SetBool("pujarParet", true);
+            
                 tutorialRotacio.SetActive(true);
                 blurEffect.SetActive(true);
             }
             if (currentCube.GetComponent<Walkable>().isButtonRed == true)
             {
-                animatorRedWall.SetBool("Down", true);
-                GameManager.Instance.RedOpen = true;
+               
+                GameManagerLvl3.Instance.RedOpen = true;
 
             }
 
             if (currentCube.GetComponent<Walkable>().isButtonRed == false)
             {
-                animatorRedWall.SetBool("Down", false);
-                GameManager.Instance.RedOpen = false;
+               
+                GameManagerLvl3.Instance.RedOpen = false;
 
             }
             currentCube.GetComponent<Walkable>().isOccupied = true;

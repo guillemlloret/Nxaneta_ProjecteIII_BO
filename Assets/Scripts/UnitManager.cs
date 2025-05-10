@@ -9,6 +9,7 @@ public class UnitManager : MonoBehaviour
 {
     public static UnitManager Instance;
     public GameObject TurnTutorial;
+    public bool Level3 = false;
     void Awake()
     {
         Instance = this;
@@ -16,8 +17,17 @@ public class UnitManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("start");
-        GameManager.Instance.UpdateGameState(GameState.RedTurn);
-        TurnTutorial.SetActive(true);
+        if (Level3)
+        {
+            Debug.Log("start");
+            GameManagerLvl3.Instance.UpdateGameState(GameState2.RedTurn);
+            //TurnTutorial.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("start");
+            GameManager.Instance.UpdateGameState(GameState.RedTurn);
+            TurnTutorial.SetActive(true);
+        }
     }
 }

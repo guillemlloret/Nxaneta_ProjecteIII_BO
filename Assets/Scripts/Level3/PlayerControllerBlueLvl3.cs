@@ -10,8 +10,8 @@ public class PlayerControllerBlue2 : MonoBehaviour
 {
     [SerializeField] PointsHUD movements;
     [SerializeField] TMP_Text TurnText;
-    public static PlayerControllerBlue Instance;
-    public PlayerControllerRed red;
+    public static PlayerControllerBlue2 Instance;
+    public PlayerControllerRed2 red;
     public GameObject player;
     public Material highlightMaterial;
     public Material regularMaterial;
@@ -44,7 +44,7 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
     void Awake()
     {
-        //Instance = this;
+        Instance = this;
     }
 
     // Start is called before the first frame update
@@ -73,21 +73,21 @@ public class PlayerControllerBlue2 : MonoBehaviour
                         FindPath();
                         movements.Movements -= 1;
 
-                        if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == false)
+                        if (GameManagerLvl3.Instance.RedWon == true && GameManagerLvl3.Instance.BlueWon == false)
                         {
                             Debug.Log("RedWon");
-                            GameManager.Instance.UpdateGameState(GameState.BlueTurn);
+                            GameManagerLvl3.Instance.UpdateGameState(GameState2.BlueTurn);
 
                         }
-                        else if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+                        else if (GameManagerLvl3.Instance.RedWon == true && GameManagerLvl3.Instance.BlueWon == true)
                         {
                             Debug.Log("Victoryy");
-                            GameManager.Instance.UpdateGameState(GameState.Victory);
+                            GameManagerLvl3.Instance.UpdateGameState(GameState2.Victory);
 
                         }
                         else
                         {
-                            GameManager.Instance.UpdateGameState(GameState.RedTurn);
+                            GameManagerLvl3.Instance.UpdateGameState(GameState2.RedTurn);
                             BlueisPlaying = false;
                         }
                     }
@@ -148,14 +148,14 @@ public class PlayerControllerBlue2 : MonoBehaviour
                 currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
             }
         }
-        if (GameManager.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
+        if (GameManagerLvl3.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
         {
 
 
             currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
 
         }
-        if (GameManager.Instance.RedOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
+        if (GameManagerLvl3.Instance.RedOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
         {
             //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
 
@@ -286,25 +286,25 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.70f;
+            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
             currentCubeBlue = finalPath[i];
 
             if (currentCubeBlue.GetComponent<Walkable>().finalBlue == true)
             {
-                GameManager.Instance.BlueWon = true;
+                GameManagerLvl3.Instance.BlueWon = true;
             }
 
             currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
         }
-        if (GameManager.Instance.RedWon == true && GameManager.Instance.BlueWon == true)
+        if (GameManagerLvl3.Instance.RedWon == true && GameManagerLvl3.Instance.BlueWon == true)
         {
             Debug.Log("victory");
-            GameManager.Instance.UpdateGameState(GameState.Victory);
+            GameManagerLvl3.Instance.UpdateGameState(GameState2.Victory);
 
         }
         if (movements.Movements <= 1)
         {
-            GameManager.Instance.UpdateGameState(GameState.Lose);
+            GameManagerLvl3.Instance.UpdateGameState(GameState2.Lose);
         }
         if (currentCubeBlue.GetComponent<Walkable>().isButton == true)
         {
@@ -315,15 +315,15 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
         {
-            GameManager.Instance.BlueOpen = true;
+            GameManagerLvl3.Instance.BlueOpen = true;
 
         }
 
 
         if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == false)
         {
-           
-            GameManager.Instance.BlueOpen = false;
+
+            GameManagerLvl3.Instance.BlueOpen = false;
 
         }
         currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
