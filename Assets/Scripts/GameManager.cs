@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     public bool RedOpen = false;
     public bool BlueOpen = false;
 
+    public bool Level3 = false;
+
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -99,6 +101,7 @@ public class GameManager : MonoBehaviour
         PlayerControllerRed.Instance.ChooseTileRed();
         image.GetComponent<Image>().sprite = red_Sprite;
 
+        
     }
     private  void HandleBlueTurn()
     {

@@ -9,36 +9,32 @@ using System;
 using UnityEngine.Rendering;
 
 
-
-public class PlayerControllerRed : MonoBehaviour
+public class PlayerControllerRed2 : MonoBehaviour
 {
     [SerializeField] PointsHUD movements;
     [SerializeField] TMP_Text TurnText;
     public static PlayerControllerRed Instance;
     public GameObject player;
     public Material highlightMaterial;
-    public  Material regularMaterial;
-    public  Material redMaterial;
-    public  Material blueMaterial;
+    public Material regularMaterial;
+    public Material redMaterial;
+    public Material blueMaterial;
     public Material highlightMaterialRed;
     public Material highlightMaterialBlue;
     public bool walking = false;
     public bool RedisPlaying = false;
     public GameObject blurEffect;
 
-
-    
+    public GameObject paret;
+    public GameObject redWall;
     public bool FrontWallRed = false;
     public GameObject tutorialRotacio;
-  
-    
+    public Animator animatorParet;
+    public Animator animatorRedWall;
     public CharacterController _characterController;
 
     [Space]
 
-    public GameObject paret;
-    public GameObject RedWall;
-    public Animator animatorRedWall;
     public Transform currentCube;
     public Transform clickedCube;
     public Transform targetPosition;
@@ -55,16 +51,13 @@ public class PlayerControllerRed : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        //Instance = this;
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
+   
 
-   void Update()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0) && RedisPlaying)
         {
@@ -84,7 +77,7 @@ public class PlayerControllerRed : MonoBehaviour
                         Debug.Log("Findpath in ");
                         currentCube.GetComponent<Walkable>().isOccupied = false;
 
-                        FindPath();
+                        FindPath2();
 
                         movements.Movements -= 1;
 
@@ -106,31 +99,31 @@ public class PlayerControllerRed : MonoBehaviour
                             RedisPlaying = false;
                         }
 
-                       
+
                     }
                 }
             }
         }
 
     }
-   
-    public void MoveRed()
+
+    public void MoveRed2()
     {
-        
+
     }
 
-    public  void ChooseTileRed()
+    public void ChooseTileRed2()
     {
         TurnText.text = "Red".ToString();
         Debug.Log("Red is going to play");
-       
+
         RedisPlaying = true;
-        RayCastDown();
+        RayCastDown2();
 
     }
 
-   
-    public void RayCastDown()
+
+    public void RayCastDown2()
     {
         Ray playerRay = new Ray(transform.GetChild(0).position, -transform.up);
         RaycastHit playerHit;
@@ -141,9 +134,9 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 currentCube = playerHit.transform;
                 Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
-                
 
-                CubeWalkable.MakeOccupied(CubeWalkable);
+
+                //CubeWalkable.MakeOccupied2(CubeWalkable);
 
             }
         }
@@ -178,12 +171,12 @@ public class PlayerControllerRed : MonoBehaviour
 
                 //Sempre entra nomes al primer bucle
 
-                
+
                 if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
-                   {
+                {
                     Debug.Log("regular");
                     Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
-                 }
+                }
                 else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
                 {
                     //    Debug.Log("rojoH");
@@ -192,7 +185,7 @@ public class PlayerControllerRed : MonoBehaviour
                 }
                 else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
                 {
-                        Debug.Log("blueH");
+                    Debug.Log("blueH");
 
                     Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
                 }
@@ -205,19 +198,19 @@ public class PlayerControllerRed : MonoBehaviour
         }
     }
 
-    void FindPath()
+    void FindPath2()
     {
         Debug.Log("Find");
         List<Transform> nextCubes = new List<Transform>();
-        List <Transform> pastCubes = new List<Transform>();
+        List<Transform> pastCubes = new List<Transform>();
 
         foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths)
         {
-          
+
             if (path.active)
             {
                 nextCubes.Add(path.target);
-                path.target.GetComponent<Walkable>().previousBlock =currentCube;
+                path.target.GetComponent<Walkable>().previousBlock = currentCube;
                 if (path.cube.GetComponent<Walkable>().finalRed)
                 {
                     path.cube.GetComponent<MeshRenderer>().material = redMaterial;
@@ -226,27 +219,27 @@ public class PlayerControllerRed : MonoBehaviour
                 {
                     path.cube.GetComponent<MeshRenderer>().material = blueMaterial;
                 }
-                
+
                 else
                 {
                     path.cube.GetComponent<MeshRenderer>().material = regularMaterial;
                 }
-                
-               
+
+
 
             }
         }
 
         pastCubes.Add(currentCube);
 
-        ExploreCube(nextCubes, pastCubes);
-        BuildPath();
-        
-        
+        ExploreCube2(nextCubes, pastCubes);
+        BuildPath2();
+
+
 
     }
 
-    void ExploreCube(List<Transform> nextCubes, List<Transform> visitedCubes)
+    void ExploreCube2(List<Transform> nextCubes, List<Transform> visitedCubes)
     {
         Debug.Log("Explore");
         Transform current = nextCubes.First();
@@ -259,7 +252,7 @@ public class PlayerControllerRed : MonoBehaviour
 
         foreach (WalkPath path in current.GetComponent<Walkable>().possiblePaths)
         {
-            if(!visitedCubes.Contains(path.target) && path.active)
+            if (!visitedCubes.Contains(path.target) && path.active)
             {
                 nextCubes.Add(path.target);
                 path.target.GetComponent<Walkable>().previousBlock = current;
@@ -271,12 +264,12 @@ public class PlayerControllerRed : MonoBehaviour
 
         if (nextCubes.Any())
         {
-            ExploreCube(nextCubes, visitedCubes);
+            ExploreCube2(nextCubes, visitedCubes);
         }
 
     }
 
-    void BuildPath()
+    void BuildPath2()
     {
         Debug.Log("Build");
         Transform cube = clickedCube;
@@ -294,10 +287,10 @@ public class PlayerControllerRed : MonoBehaviour
             }
         }
 
-        FollowPath();
+        FollowPath2();
     }
 
-    void FollowPath()
+    void FollowPath2()
     {
 
         walking = true;
@@ -305,10 +298,10 @@ public class PlayerControllerRed : MonoBehaviour
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
             Debug.Log("Follow");
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.70f;
+            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.70f;
 
-   
-           
+
+
 
 
             Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
@@ -333,7 +326,7 @@ public class PlayerControllerRed : MonoBehaviour
             //puja la paret
             if (currentCube.GetComponent<Walkable>().isButton == true)
             {
-                
+                animatorParet.SetBool("pujarParet", true);
                 tutorialRotacio.SetActive(true);
                 blurEffect.SetActive(true);
             }
@@ -341,9 +334,9 @@ public class PlayerControllerRed : MonoBehaviour
             {
                 animatorRedWall.SetBool("Down", true);
                 GameManager.Instance.RedOpen = true;
-               
+
             }
-           
+
             if (currentCube.GetComponent<Walkable>().isButtonRed == false)
             {
                 animatorRedWall.SetBool("Down", false);
@@ -360,10 +353,10 @@ public class PlayerControllerRed : MonoBehaviour
 
         finalPath.Clear();
 
-       
+
     }
 
-    
+
 
     //void Clear()
     //{
