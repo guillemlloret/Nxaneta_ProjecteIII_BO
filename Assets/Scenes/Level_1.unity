@@ -6557,13 +6557,12 @@ MonoBehaviour:
   walking: 0
   RedisPlaying: 0
   blurEffect: {fileID: 521120020}
-  paret: {fileID: 430803292}
-  redWall: {fileID: 1214061537}
   FrontWallRed: 0
   tutorialRotacio: {fileID: 145072091}
-  animatorParet: {fileID: 430803297}
-  animatorRedWall: {fileID: 1214061538}
   _characterController: {fileID: 1016582296}
+  paret: {fileID: 430803292}
+  RedWall: {fileID: 0}
+  animatorRedWall: {fileID: 1214061538}
   currentCube: {fileID: 0}
   clickedCube: {fileID: 0}
   targetPosition: {fileID: 0}
@@ -6833,6 +6832,7 @@ MonoBehaviour:
   blue_Sprite: {fileID: 21300000, guid: 6752e8286d3897f46b18c7c2fc1c801b, type: 3}
   RedOpen: 0
   BlueOpen: 0
+  Level3: 0
 --- !u!1 &1116808503
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,6 +11441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnTutorial: {fileID: 1967803244}
+  Level3: 0
 --- !u!4 &2034255865
 Transform:
   m_ObjectHideFlags: 0
