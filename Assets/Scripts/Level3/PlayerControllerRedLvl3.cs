@@ -141,20 +141,20 @@ public class PlayerControllerRed2 : MonoBehaviour
             }
         }
 
-        if (GameManagerLvl3.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)
-        {
+        //if (GameManagerLvl3.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)
+        //{
 
 
-            currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
+        //    currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
 
-        }
-        if (GameManagerLvl3.Instance.BlueOpen == true && currentCube.GetComponent<Walkable>().FrontWallRed == true)
-        {
-            //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
+        //}
+        //if (GameManagerLvl3.Instance.BlueOpen == true && currentCube.GetComponent<Walkable>().FrontWallRed == true)
+        //{
+        //    //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
 
-            currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+        //    currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
 
-        }
+        //}
 
 
 
@@ -330,19 +330,19 @@ public class PlayerControllerRed2 : MonoBehaviour
                 tutorialRotacio.SetActive(true);
                 blurEffect.SetActive(true);
             }
-            if (currentCube.GetComponent<Walkable>().isButtonRed == true)
-            {
+            //if (currentCube.GetComponent<Walkable>().isButtonRed == true)
+            //{
                
-                GameManagerLvl3.Instance.RedOpen = true;
+            //    GameManagerLvl3.Instance.RedOpen = true;
 
-            }
+            //}
 
-            if (currentCube.GetComponent<Walkable>().isButtonRed == false)
-            {
+            //if (currentCube.GetComponent<Walkable>().isButtonRed == false)
+            //{
                
-                GameManagerLvl3.Instance.RedOpen = false;
+            //    GameManagerLvl3.Instance.RedOpen = false;
 
-            }
+            //}
             currentCube.GetComponent<Walkable>().isOccupied = true;
 
             //currentCube.GetComponent<Walkable>().possiblePaths.Clear();

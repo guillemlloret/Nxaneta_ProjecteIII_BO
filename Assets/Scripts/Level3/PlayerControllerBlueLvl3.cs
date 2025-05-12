@@ -148,20 +148,20 @@ public class PlayerControllerBlue2 : MonoBehaviour
                 currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
             }
         }
-        if (GameManagerLvl3.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
-        {
+        //if (GameManagerLvl3.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
+        //{
 
 
-            currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
+        //    currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
 
-        }
-        if (GameManagerLvl3.Instance.RedOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
-        {
-            //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
+        //}
+        //if (GameManagerLvl3.Instance.RedOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
+        //{
+        //    //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
 
-            currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+        //    currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
 
-        }
+        //}
 
         foreach (WalkPath Possiblepath in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
         {
@@ -313,19 +313,19 @@ public class PlayerControllerBlue2 : MonoBehaviour
             blurEffect.SetActive(true);
         }
 
-        if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
-        {
-            GameManagerLvl3.Instance.BlueOpen = true;
+        //if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
+        //{
+        //    GameManagerLvl3.Instance.BlueOpen = true;
 
-        }
+        //}
 
 
-        if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == false)
-        {
+        //if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == false)
+        //{
 
-            GameManagerLvl3.Instance.BlueOpen = false;
+        //    GameManagerLvl3.Instance.BlueOpen = false;
 
-        }
+        //}
         currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
 
 

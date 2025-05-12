@@ -29,6 +29,15 @@ public class Walkable : MonoBehaviour
     public bool FrontWallBlue = false;
     public bool FrontWallRed = false;
 
+    [Space]
+    [Header("level3")]
+    public bool isButtonLightGreen = false;
+    public bool isButtonDarkGreen = false;
+    public bool isButtonPurple = false;
+    public bool FrontWallDarkGreen = false;
+    public bool PurpleWall = false;
+    public bool LightGreenWall = false;
+
 
 
     [Space]

@@ -32,8 +32,9 @@ public class GameManagerLvl3 : MonoBehaviour
     public Sprite red_Sprite;
     public Sprite blue_Sprite;
 
-    public bool RedOpen = false;
-    public bool BlueOpen = false;
+    public bool PurpleUp = false;
+    public bool LightGreenUp = false;
+    public bool DarkGreenOpen = false;
 
     public bool Level3 = false;
 
