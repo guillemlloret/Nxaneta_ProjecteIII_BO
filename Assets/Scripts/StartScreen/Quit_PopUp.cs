@@ -10,16 +10,22 @@ public class Quit_PopUp : MonoBehaviour
 {
     [SerializeField] private GameObject blurVolume;
     public GameObject QuitPanel;
+    public GameObject SettingsPanel;
     public GameObject DarkPanel;
-    public void OpenPanel()
+    public void OpenQuitPanel()
     {
-        if (QuitPanel!=null)
+        if (QuitPanel != null)
         {
             QuitPanel.SetActive(true);
             DarkPanel.SetActive(true);
-
-            //blurVolume.SetActive(true);
-
+        }
+    }
+    public void OpenSettingsPanel()
+    {
+        if (SettingsPanel != null)
+        {
+            SettingsPanel.SetActive(true);
+            DarkPanel.SetActive(true);
         }
     }
 }
