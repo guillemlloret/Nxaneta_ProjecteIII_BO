@@ -1330,6 +1330,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 1
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &173891507
@@ -1691,6 +1697,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &312493285
@@ -2306,6 +2318,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &357682167
@@ -2681,6 +2699,12 @@ MonoBehaviour:
   isButtonBlue: 1
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &464507714
@@ -3633,6 +3657,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &629897426
@@ -4114,6 +4144,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 1
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &711877957
@@ -4978,6 +5014,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &739723919
@@ -5297,6 +5339,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &817561325
@@ -5898,6 +5946,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &856025068
@@ -6424,6 +6478,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &1006733334
@@ -6496,6 +6556,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 1
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1006733337
@@ -6712,9 +6778,13 @@ MonoBehaviour:
   currentCube: {fileID: 0}
   clickedCube: {fileID: 0}
   targetPosition: {fileID: 0}
-  speed: 0.5
+  speed: 9.81
   nextCube: {fileID: 0}
   finalPath: []
+  startPoint: {x: 0, y: 0, z: 0}
+  endPoint: {x: 0, y: 0, z: 0}
+  duration: 2.5
+  timeElapsed: 8.5
 --- !u!1 &1016601448
 GameObject:
   m_ObjectHideFlags: 0
@@ -7748,7 +7818,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fd975664a5c47944ab63d55f8546d3f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.8200002
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd975664a5c47944ab63d55f8546d3f7,
         type: 3}
@@ -7875,6 +7945,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1312529160
@@ -8615,6 +8691,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 1
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1453453908
@@ -9278,6 +9360,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &1575394154 stripped
@@ -9527,6 +9615,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1585608144
@@ -10070,6 +10164,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1675211801
@@ -10390,6 +10490,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1743761857
@@ -11385,6 +11491,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 1
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &1922592279
@@ -11866,6 +11978,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1001 &1972031338
@@ -12059,6 +12177,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 1
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &2001991738
@@ -12560,6 +12684,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 1
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &2029493283
@@ -12669,6 +12799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnTutorial: {fileID: 706142043}
+  Level3: 0
 --- !u!4 &2034255865
 Transform:
   m_ObjectHideFlags: 0
@@ -12829,6 +12960,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &2051077881
@@ -13325,6 +13462,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 1
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!1 &2107529506
@@ -13500,6 +13643,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &2108365612
@@ -13643,6 +13792,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.01
   stairOffset: 0.4
 --- !u!65 &2122829808

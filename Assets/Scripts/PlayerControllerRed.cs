@@ -53,6 +53,16 @@ public class PlayerControllerRed : MonoBehaviour
 
     private float blend;
 
+    [Space]
+
+    public Vector3 startPoint;
+
+    public Vector3 endPoint;
+
+    public float duration = 2f;
+
+    public float timeElapsed = 0f;
+
     void Awake()
     {
         Instance = this;
@@ -305,13 +315,22 @@ public class PlayerControllerRed : MonoBehaviour
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
             Debug.Log("Follow");
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.70f;
 
-   
-           
+            startPoint = player.transform.position;
+           endPoint = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.70f;
+
+            //player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.70f;
 
 
-            Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
+            timeElapsed += Time.deltaTime;
+
+            float t = Mathf.Clamp01(timeElapsed / duration);
+
+            transform.position = Vector3.Lerp(startPoint, endPoint, t);
+
+
+
+    Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
 
             currentCube = finalPath[i];
 
