@@ -49,6 +49,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 
     private float blend;
 
+
     void Awake()
     {
         Instance = this;

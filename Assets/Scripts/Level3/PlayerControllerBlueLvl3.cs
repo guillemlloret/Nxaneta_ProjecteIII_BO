@@ -50,15 +50,15 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
     private float blend;
 
-    
 
+    
     void Awake()
     {
         Instance = this;
     }
-
+   
     // Start is called before the first frame update
-  
+
     // Update is called once per frame
     void Update()
     {
