@@ -47,6 +47,8 @@ public class PlayerControllerRed2 : MonoBehaviour
 
     public List<Transform> finalPath = new List<Transform>();
 
+
+
     private float blend;
 
 
@@ -300,8 +302,6 @@ public class PlayerControllerRed2 : MonoBehaviour
         {
             Debug.Log("Follow");
             player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
-
-
 
 
 

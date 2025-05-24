@@ -16,7 +16,7 @@ public class PlayerControllerRed : MonoBehaviour
     [SerializeField] PointsHUD movements;
     [SerializeField] TMP_Text TurnText;
     public static PlayerControllerRed Instance;
-    public GameObject player;
+    public Transform player;
     public Material highlightMaterial;
     public  Material regularMaterial;
     public  Material redMaterial;
@@ -56,17 +56,31 @@ public class PlayerControllerRed : MonoBehaviour
 
     [Space]
 
-    public Vector3 startPoint;
+    public Transform startPoint;
 
-    public Vector3 endPoint;
+    public Transform endPoint;
 
-    public float duration = 2f;
+    
 
-    public float timeElapsed = 0f;
+    [Range(0, 1)] public float lerpSpeed;
+
+    public float moveValue;
+    public bool MoveTarget = false;
+
+    Vector3 velocity = new Vector3(0, 0, 0);
 
     void Awake()
     {
         Instance = this;
+    }
+
+    private void FixedUpdate()
+    {
+        if (MoveTarget)
+        {
+            
+            player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up*0.70f, ref velocity, Time.deltaTime * lerpSpeed);
+        }
     }
 
     // Start is called before the first frame update
@@ -117,7 +131,7 @@ public class PlayerControllerRed : MonoBehaviour
                             RedisPlaying = false;
                         }
 
-                       
+
                     }
                 }
             }
@@ -317,25 +331,14 @@ public class PlayerControllerRed : MonoBehaviour
         {
             Debug.Log("Follow");
 
-            startPoint = player.transform.position;
-           endPoint = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.70f;
-
-            //player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position  + transform.up *0.70f;
-
-
-            timeElapsed += Time.deltaTime;
-
-            //float t = timeElapsed / duration;
-            float t = Mathf.Clamp01(timeElapsed / duration);
-
-            transform.position = Vector3.MoveTowards(startPoint, endPoint, t);
-
+            startPoint = player ;
+            endPoint= finalPath[i].GetComponent<Walkable>().transform;
+            
             
 
-            //transform.position = Vector3.MoveTowards(startPoint,endPoint, Time.deltaTime * speed / 2);
-
-            //transform.position = Vector3.Lerp(startPoint, endPoint, Time.deltaTime * speed / 2);
-
+   
+            movePlayer();
+ 
 
 
             Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
@@ -390,7 +393,13 @@ public class PlayerControllerRed : MonoBehaviour
        
     }
 
-    
+    private void movePlayer()
+    {
+        //player.transform.LookAt(endPoint);
+        MoveTarget = true;
+    }
+
+
 
     //void Clear()
     //{
