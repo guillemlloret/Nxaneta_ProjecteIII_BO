@@ -38,9 +38,19 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
     [Space]
 
+    [Header("Lvl3 walls")]
+    public GameObject VerdFluixWall;
+    public Animator _animatorVerdFluix;
+    public GameObject LilaWall;
+    public Animator _animatorLila;
+
+    [Space]
+
     public List<Transform> finalPath = new List<Transform>();
 
     private float blend;
+
+    
 
     void Awake()
     {
@@ -311,6 +321,16 @@ public class PlayerControllerBlue2 : MonoBehaviour
             
             tutorialRotacio.SetActive(true);
             blurEffect.SetActive(true);
+        }
+        if (currentCubeBlue.GetComponent<Walkable>().isButtonLightGreen == true)
+        {
+            _animatorVerdFluix.SetBool("VerdaUp", true);
+            GameManagerLvl3.Instance.LightGreenUp = true;
+        }
+        if (currentCubeBlue.GetComponent<Walkable>().isButtonLightGreen == false)
+        {
+            _animatorVerdFluix.SetBool("VerdaUp", false);
+            GameManagerLvl3.Instance.LightGreenUp = false;
         }
 
         //if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)

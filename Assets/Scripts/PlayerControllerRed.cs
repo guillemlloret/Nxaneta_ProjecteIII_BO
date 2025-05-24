@@ -7,6 +7,7 @@ using TMPro;
 using System.IO;
 using System;
 using UnityEngine.Rendering;
+using Unity.VisualScripting;
 
 
 
@@ -324,13 +325,20 @@ public class PlayerControllerRed : MonoBehaviour
 
             timeElapsed += Time.deltaTime;
 
+            //float t = timeElapsed / duration;
             float t = Mathf.Clamp01(timeElapsed / duration);
 
-            transform.position = Vector3.Lerp(startPoint, endPoint, t);
+            transform.position = Vector3.MoveTowards(startPoint, endPoint, t);
+
+            
+
+            //transform.position = Vector3.MoveTowards(startPoint,endPoint, Time.deltaTime * speed / 2);
+
+            //transform.position = Vector3.Lerp(startPoint, endPoint, Time.deltaTime * speed / 2);
 
 
 
-    Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
+            Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
 
             currentCube = finalPath[i];
 

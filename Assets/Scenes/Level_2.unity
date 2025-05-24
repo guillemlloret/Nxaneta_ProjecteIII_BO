@@ -6778,13 +6778,13 @@ MonoBehaviour:
   currentCube: {fileID: 0}
   clickedCube: {fileID: 0}
   targetPosition: {fileID: 0}
-  speed: 9.81
+  speed: 200
   nextCube: {fileID: 0}
   finalPath: []
   startPoint: {x: 0, y: 0, z: 0}
   endPoint: {x: 0, y: 0, z: 0}
-  duration: 2.5
-  timeElapsed: 8.5
+  duration: 0.007
+  timeElapsed: 100.3
 --- !u!1 &1016601448
 GameObject:
   m_ObjectHideFlags: 0
