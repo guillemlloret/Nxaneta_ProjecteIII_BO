@@ -1198,8 +1198,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 382421711}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1743761860}
+    active: 1
+    cube: {fileID: 1743761855}
+    occupied: 0
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  - target: {fileID: 382421712}
+    active: 1
+    cube: {fileID: 382421711}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -1494,6 +1507,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -2115,8 +2129,13 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 2108365610}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -2373,8 +2392,13 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 659802120}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -3053,6 +3077,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -3233,8 +3258,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1214662456}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1181748410}
+    active: 1
+    cube: {fileID: 1181748405}
+    occupied: 0
+  - target: {fileID: 935464821}
+    active: 1
+    cube: {fileID: 935464820}
+    occupied: 0
+  - target: {fileID: 846045928}
+    active: 1
+    cube: {fileID: 846045924}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -4285,6 +4323,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -4690,6 +4729,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -4928,8 +4968,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2092198973}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 813485834}
+    active: 1
+    cube: {fileID: 813485830}
+    occupied: 0
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  - target: {fileID: 382421712}
+    active: 1
+    cube: {fileID: 382421711}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5739,8 +5792,13 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2029493280}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 2108365610}
+    active: 1
+    cube: {fileID: 2108365609}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -6301,6 +6359,7 @@ MonoBehaviour:
     cube: {fileID: 1111043132}
     occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -6825,7 +6884,16 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1111043132}
     occupied: 0
+  - target: {fileID: 483770247}
+    active: 1
+    cube: {fileID: 483770242}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup:
+  - target: {fileID: 2122829806}
+    active: 1
+    cube: {fileID: 2122829805}
+    occupied: 0
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -7143,8 +7211,13 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 312493282}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1181748410}
+    active: 1
+    cube: {fileID: 1181748405}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -7480,6 +7553,7 @@ MonoBehaviour:
     cube: {fileID: 1111043132}
     occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -7562,8 +7636,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1643077192}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 2001991736}
+    active: 1
+    cube: {fileID: 2001991735}
+    occupied: 0
+  - target: {fileID: 1643077197}
+    active: 1
+    cube: {fileID: 1643077192}
+    occupied: 0
+  - target: {fileID: 1312529158}
+    active: 1
+    cube: {fileID: 1312529157}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -7943,6 +8030,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8250,6 +8338,7 @@ MonoBehaviour:
     cube: {fileID: 2108365609}
     occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8796,8 +8885,17 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1643077192}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 935464821}
+    active: 1
+    cube: {fileID: 935464820}
+    occupied: 0
+  - target: {fileID: 2001991736}
+    active: 1
+    cube: {fileID: 2001991735}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -9206,8 +9304,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1312529157}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1181748410}
+    active: 1
+    cube: {fileID: 1181748405}
+    occupied: 0
+  - target: {fileID: 935464821}
+    active: 1
+    cube: {fileID: 935464820}
+    occupied: 0
+  - target: {fileID: 1312529158}
+    active: 1
+    cube: {fileID: 1312529157}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -9853,8 +9964,17 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1214662456}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 2001991736}
+    active: 1
+    cube: {fileID: 2001991735}
+    occupied: 0
+  - target: {fileID: 1214662461}
+    active: 1
+    cube: {fileID: 1214662456}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -10124,6 +10244,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -10596,6 +10717,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -11235,8 +11357,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1967355256}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1922592277}
+    active: 1
+    cube: {fileID: 1922592276}
+    occupied: 0
+  - target: {fileID: 846045928}
+    active: 1
+    cube: {fileID: 846045924}
+    occupied: 0
+  - target: {fileID: 483770247}
+    active: 1
+    cube: {fileID: 483770242}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -11457,6 +11592,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -11811,7 +11947,7 @@ Transform:
   m_GameObject: {fileID: 1611864853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.04, y: -0.41, z: 2.9800005}
+  m_LocalPosition: {x: 1.04, y: -0.83, z: 2.9800005}
   m_LocalScale: {x: 4.544552, y: 0.87979, z: 0.87979}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12101,8 +12237,17 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 483770242}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1181748410}
+    active: 1
+    cube: {fileID: 1181748405}
+    occupied: 0
+  - target: {fileID: 935464821}
+    active: 1
+    cube: {fileID: 935464820}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -12256,8 +12401,17 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2122829805}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 483770247}
+    active: 1
+    cube: {fileID: 483770242}
+    occupied: 0
+  - target: {fileID: 846045928}
+    active: 1
+    cube: {fileID: 846045924}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -12604,6 +12758,7 @@ MonoBehaviour:
     cube: {fileID: 1111043132}
     occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -13609,8 +13764,21 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1343809799}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1569347821}
+    active: 1
+    cube: {fileID: 1569347817}
+    occupied: 0
+  - target: {fileID: 1743761860}
+    active: 1
+    cube: {fileID: 1743761855}
+    occupied: 0
+  - target: {fileID: 173891505}
+    active: 1
+    cube: {fileID: 173891504}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -14098,8 +14266,25 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1675211799}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  - target: {fileID: 382421712}
+    active: 1
+    cube: {fileID: 382421711}
+    occupied: 0
+  - target: {fileID: 483770247}
+    active: 1
+    cube: {fileID: 483770242}
+    occupied: 0
+  - target: {fileID: 846045928}
+    active: 1
+    cube: {fileID: 846045924}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -14382,8 +14567,17 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1181748405}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1181748410}
+    active: 1
+    cube: {fileID: 1181748405}
+    occupied: 0
+  - target: {fileID: 1312529158}
+    active: 1
+    cube: {fileID: 1312529157}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -14893,6 +15087,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -15163,8 +15358,17 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  - target: {fileID: 382421712}
+    active: 1
+    cube: {fileID: 382421711}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -15506,6 +15710,7 @@ MonoBehaviour:
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -15928,8 +16133,25 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1922592276}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 1569347821}
+    active: 1
+    cube: {fileID: 1569347817}
+    occupied: 0
+  - target: {fileID: 1922592277}
+    active: 1
+    cube: {fileID: 1922592276}
+    occupied: 0
+  - target: {fileID: 711362646}
+    active: 1
+    cube: {fileID: 711362642}
+    occupied: 0
+  - target: {fileID: 813485834}
+    active: 1
+    cube: {fileID: 813485830}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -16117,6 +16339,7 @@ MonoBehaviour:
     cube: {fileID: 1111043132}
     occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -16270,8 +16493,25 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 483770242}
     occupied: 0
-  possiblePathsLvl3: []
+  possiblePathsLvl3:
+  - target: {fileID: 2001991736}
+    active: 1
+    cube: {fileID: 2001991735}
+    occupied: 0
+  - target: {fileID: 1312529158}
+    active: 1
+    cube: {fileID: 1312529157}
+    occupied: 0
+  - target: {fileID: 483770247}
+    active: 1
+    cube: {fileID: 483770242}
+    occupied: 0
+  - target: {fileID: 846045928}
+    active: 1
+    cube: {fileID: 846045924}
+    occupied: 0
   possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
