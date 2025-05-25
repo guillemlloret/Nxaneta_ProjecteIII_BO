@@ -7,7 +7,9 @@ public class Walkable : MonoBehaviour
 
     public List<WalkPath> possiblePaths = new List<WalkPath>();
 
-    public List<WalkPath> possiblePathsLvl3 = new List<WalkPath>(); 
+    public List<WalkPath> possiblePathsLvl3 = new List<WalkPath>();
+
+    public List<WalkPath> possiblePathsCopy = new List<WalkPath>();
 
     [Space]
 
