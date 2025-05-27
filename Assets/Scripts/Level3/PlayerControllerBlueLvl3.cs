@@ -333,6 +333,18 @@ public class PlayerControllerBlue2 : MonoBehaviour
             GameManagerLvl3.Instance.LightGreenUp = false;
         }
 
+        if (currentCubeBlue.GetComponent<Walkable>().isButtonPurple == true)
+        {
+            Debug.Log("boto lila apretat");
+            _animatorLila.SetBool("PurpleUp", true);
+            GameManagerLvl3.Instance.PurpleUp = true;
+        }
+        if (currentCubeBlue.GetComponent<Walkable>().isButtonPurple == false)
+        {
+            _animatorLila.SetBool("PurpleUp", false);
+            GameManagerLvl3.Instance.PurpleUp = false;
+        }
+
         //if (currentCubeBlue.GetComponent<Walkable>().isButtonBlue == true)
         //{
         //    GameManagerLvl3.Instance.BlueOpen = true;

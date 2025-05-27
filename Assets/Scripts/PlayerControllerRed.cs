@@ -26,7 +26,7 @@ public class PlayerControllerRed : MonoBehaviour
     public bool walking = false;
     public bool RedisPlaying = false;
     public GameObject blurEffect;
-
+    public Animator playerAnimator;
 
     
     public bool FrontWallRed = false;
@@ -62,7 +62,7 @@ public class PlayerControllerRed : MonoBehaviour
 
     
 
-    [Range(0, 1)] public float lerpSpeed;
+    [Range(0, 10)] public float lerpSpeed;
 
     public float moveValue;
     public bool MoveTarget = false;
@@ -78,7 +78,8 @@ public class PlayerControllerRed : MonoBehaviour
     {
         if (MoveTarget)
         {
-            
+            playerAnimator.SetBool("Jump", true);
+
             player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up*0.70f, ref velocity, Time.deltaTime * lerpSpeed);
         }
     }

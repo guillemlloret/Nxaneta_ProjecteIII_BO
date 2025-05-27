@@ -506,8 +506,8 @@ MonoBehaviour:
     occupied: 0
   VerdFluixWall: {fileID: 1611864853}
   _animatorVerdFluix: {fileID: 1611864855}
-  LilaWall: {fileID: 0}
-  _animatorLila: {fileID: 0}
+  LilaWall: {fileID: 555269440}
+  _animatorLila: {fileID: 555269445}
   finalPath: []
 --- !u!1 &49091215
 GameObject:
@@ -1460,17 +1460,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f9836395195d6db41953bd896c4508ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.71
+      value: -6.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9836395195d6db41953bd896c4508ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.99
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9836395195d6db41953bd896c4508ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.4
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9836395195d6db41953bd896c4508ca,
         type: 3}
@@ -1685,10 +1685,6 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1585608142}
     occupied: 0
-  - target: {fileID: 935464821}
-    active: 1
-    cube: {fileID: 935464820}
-    occupied: 0
   - target: {fileID: 1020648645}
     active: 1
     cube: {fileID: 1020648644}
@@ -1846,7 +1842,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 21.69
   orthographic: 0
   orthographic size: 3.81
   m_Depth: -1
@@ -2416,7 +2412,19 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  possiblePathsCopy: []
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  possiblePathsCopy:
+  - target: {fileID: 2108365610}
+    active: 1
+    cube: {fileID: 2108365609}
+    occupied: 0
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
   possiblePathsLvl3_Greenup: []
   previousBlock: {fileID: 0}
   isStair: 0
@@ -4152,6 +4160,133 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 548788523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &555269440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555269441}
+  - component: {fileID: 555269444}
+  - component: {fileID: 555269443}
+  - component: {fileID: 555269442}
+  - component: {fileID: 555269445}
+  m_Layer: 0
+  m_Name: PurpleWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555269441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555269440}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.17, y: -0.5188766, z: -1.06}
+  m_LocalScale: {x: 2.743599, y: 0.98554087, z: 0.9262999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1554685771}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &555269442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555269440}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &555269443
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555269440}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ad464a8ef2c658447928a9deee61bb29, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &555269444
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555269440}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &555269445
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555269440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de14f698eeffaa9459b95f4f31198556, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &556389428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,7 +5155,7 @@ MonoBehaviour:
   finalBlue: 0
   isButtonRed: 0
   isButtonBlue: 0
-  FrontWallBlue: 0
+  FrontWallBlue: 1
   FrontWallRed: 0
   isButtonLightGreen: 0
   isButtonDarkGreen: 0
@@ -6078,6 +6213,10 @@ MonoBehaviour:
   - target: {fileID: 2108365610}
     active: 1
     cube: {fileID: 2108365609}
+    occupied: 0
+  - target: {fileID: 382421712}
+    active: 1
+    cube: {fileID: 382421711}
     occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
@@ -7176,6 +7315,14 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2122829805}
     occupied: 0
+  - target: {fileID: 2108365610}
+    active: 1
+    cube: {fileID: 2108365609}
+    occupied: 0
+  - target: {fileID: 1343809800}
+    active: 1
+    cube: {fileID: 1343809799}
+    occupied: 0
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8107,6 +8254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016582294}
   - component: {fileID: 1016582295}
+  - component: {fileID: 1016582296}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8123,8 +8271,8 @@ Transform:
   m_GameObject: {fileID: 1016582293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.06, y: 0.81, z: -1.03}
-  m_LocalScale: {x: 0.81615, y: 0.81615, z: 0.81615}
+  m_LocalPosition: {x: -3.06, y: 0.80999994, z: -1.03}
+  m_LocalScale: {x: 0.81615007, y: 0.81615007, z: 0.81615007}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 556389429}
@@ -8144,7 +8292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movements: {fileID: 1404536638}
   TurnText: {fileID: 647785184}
-  player: {fileID: 1016582293}
+  player: {fileID: 1016582294}
   highlightMaterial: {fileID: 2100000, guid: 541d91f6f01771a45a124d6a011c415e, type: 2}
   regularMaterial: {fileID: 2100000, guid: 75475174efeda8146a1600e7ab1aea22, type: 2}
   redMaterial: {fileID: 2100000, guid: 7fc204f9558accb4999ec9b94bcb9bc7, type: 2}
@@ -8171,6 +8319,33 @@ MonoBehaviour:
   nextCube: {fileID: 0}
   finalPath: []
   SpecialMoveRed: 0
+  startPoint: {fileID: 0}
+  endPoint: {fileID: 0}
+  lerpSpeed: 7.31
+  moveValue: 0.0009
+  MoveTarget: 0
+  playerAnimator: {fileID: 1016582296}
+--- !u!95 &1016582296
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016582293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 412f6f700eced0d42810e1a5678d4c09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1016601448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8209,7 +8384,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cdafcc59d3745a64ea234eced7953f44, type: 2}
+  - {fileID: 2100000, guid: 27cb2a4ad9ceec649aba45027def01c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9857,7 +10032,7 @@ Transform:
   m_GameObject: {fileID: 1244240619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.69, y: 1.03, z: 0.596}
+  m_LocalPosition: {x: 0.69, y: 0.73, z: 0.596}
   m_LocalScale: {x: 0.71307886, y: 0.71307886, z: 0.71307886}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10458,7 +10633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1343495354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11414,8 +11589,8 @@ Transform:
   m_GameObject: {fileID: 1543052760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.56, z: -0.92}
-  m_LocalScale: {x: 0.87979, y: 0.87979, z: 0.87979}
+  m_LocalPosition: {x: -0.018, y: 0.56, z: -1.003}
+  m_LocalScale: {x: 0.87979, y: 1.4896604, z: 0.87979}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1554685771}
@@ -11563,6 +11738,7 @@ Transform:
   - {fileID: 1020648645}
   - {fileID: 1922592277}
   - {fileID: 1611864854}
+  - {fileID: 555269441}
   - {fileID: 1838373557}
   - {fileID: 115864322}
   - {fileID: 2107529507}
@@ -11592,7 +11768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1561066573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11627,20 +11803,20 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.31982195, g: 0.6075471, b: 0.34952095, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.099999905, a: 1}
   m_Intensity: 22.01
-  m_Range: 5.3759794
+  m_Range: 6.29
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 10
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -11842,7 +12018,19 @@ MonoBehaviour:
     cube: {fileID: 483770242}
     occupied: 0
   possiblePathsCopy: []
-  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Greenup:
+  - target: {fileID: 2122829806}
+    active: 1
+    cube: {fileID: 2122829805}
+    occupied: 0
+  - target: {fileID: 1922592277}
+    active: 1
+    cube: {fileID: 1922592276}
+    occupied: 0
+  - target: {fileID: 846045928}
+    active: 1
+    cube: {fileID: 846045924}
+    occupied: 0
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -16120,7 +16308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2056910925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16155,7 +16343,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.9245283, g: 0.7858011, b: 0.026165737, a: 1}
+  m_Color: {r: 0.83396226, g: 0.7590108, b: 0.3571876, a: 1}
   m_Intensity: 68
   m_Range: 8.795924
   m_SpotAngle: 64.86955
@@ -17206,7 +17394,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 30
+    FieldOfView: 21.69
     OrthographicSize: 3.81
     NearClipPlane: 0.3
     FarClipPlane: 1000

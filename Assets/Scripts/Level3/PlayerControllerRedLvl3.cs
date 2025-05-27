@@ -14,7 +14,7 @@ public class PlayerControllerRed2 : MonoBehaviour
     [SerializeField] PointsHUD movements;
     [SerializeField] TMP_Text TurnText;
     public static PlayerControllerRed2 Instance;
-    public GameObject player;
+    public Transform player;
     public Material highlightMaterial;
     public Material regularMaterial;
     public Material redMaterial;
@@ -53,19 +53,49 @@ public class PlayerControllerRed2 : MonoBehaviour
 
     private float blend;
 
+    [Space]
+
+    public Transform startPoint;
+
+    public Transform endPoint;
+
+
+
+    [Range(0, 10)] public float lerpSpeed;
+
+    public float moveValue;
+    public bool MoveTarget = false;
+
+    Vector3 velocity = new Vector3(0, 0, 0);
+    public Animator playerAnimator;
+
+
 
     void Awake()
     {
         Instance = this;
     }
+    private void FixedUpdate()
+    {
+        if (MoveTarget)
+        {
+            playerAnimator.SetBool("Jump", true);
+            player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up * 0.60f, ref velocity, Time.deltaTime * lerpSpeed);
+            
+        }
+    }
 
     // Start is called before the first frame update
-
+    private void Start()
+    {
+        playerAnimator.SetBool("Jump", false);
+    }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && RedisPlaying)
         {
+            //CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
             Debug.Log("input");
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); RaycastHit mouseHit;
 
@@ -109,6 +139,7 @@ public class PlayerControllerRed2 : MonoBehaviour
                     SpecialMoveRed = false;
                 }
             }
+           
         }
 
         if (Input.GetKeyDown(("space")) && RedisPlaying)
@@ -124,9 +155,20 @@ public class PlayerControllerRed2 : MonoBehaviour
                 }
             }
 
-            CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
+            if (GameManagerLvl3.Instance.LightGreenUp == true)
+            {
+                CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
+                CubeWalkable.possiblePaths = CubeWalkable.possiblePathsLvl3_Greenup;
+            }
 
-            //CubeWalkable.possiblePaths = CubeWalkable.possiblePathsLvl3;
+            else
+            {
+                CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
+                CubeWalkable.possiblePaths = CubeWalkable.possiblePathsLvl3;
+            }
+           
+
+            
             SpecialMoveRed = true;
             RayCastDown();
            
@@ -134,39 +176,35 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(("space")) && RedisPlaying && SpecialMoveRed)
-        {
-            Debug.Log("return to normal");
-           // SpecialMoveRed = false;
+        //if (Input.GetKeyDown(("space")) && RedisPlaying && SpecialMoveRed)
+        //{
+        //    Debug.Log("return to normal");
+        //   // SpecialMoveRed = false;
 
-            //SpecialMoveRed = false;
-            foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
-            {
-                Debug.Log(Possiblepath);
-                if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == highlightMaterial)
-                {
-                    //    Debug.Log("rojoH");
+        //    //SpecialMoveRed = false;
+        //    foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
+        //    {
+        //        Debug.Log(Possiblepath);
+        //        if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == highlightMaterial)
+        //        {
+        //            //    Debug.Log("rojoH");
 
-                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = regularMaterial;
-                }
-            }
+        //            Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = regularMaterial;
+        //        }
+        //    }
 
-            CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
+        //    CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
 
-            CubeWalkable.possiblePaths = CubeWalkable.possiblePathsLvl3;
+        //    CubeWalkable.possiblePaths = CubeWalkable.possiblePathsLvl3;
 
-            RayCastDown();
+        //    RayCastDown();
 
 
 
-        }
-
-    }
-
-        public void MoveRed2()
-    {
+        //}
 
     }
+
 
     public void ChooseTileRed()
     {
@@ -212,9 +250,9 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         //}
 
+        //CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
 
-
-        if (SpecialMoveRed)
+        if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == false)
         {
             Debug.Log("SpecialRed");
 
@@ -257,8 +295,52 @@ public class PlayerControllerRed2 : MonoBehaviour
 
             }
         }
+        else if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == true)
+        {
+            Debug.Log("SpecialRed-GreenUp");
+
+
+            foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePathsLvl3_Greenup)
+            {
+                if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+                {
+                    //Possibles caselles
+                    Debug.Log(Possiblepath.target);
+
+                    //fa be el debug del material
+                    Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial);
+
+                    //Sempre entra nomes al primer bucle
+
+
+                    if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
+                    {
+                        Debug.Log("regular");
+                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
+                    }
+                    else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
+                    {
+                        //    Debug.Log("rojoH");
+
+                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
+                    }
+                    else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
+                    {
+                        Debug.Log("blueH");
+
+                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
+                    }
+
+
+
+                }
+
+
+            }
+        }
         else
         {
+            CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
             foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
             {
                 if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
@@ -296,6 +378,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 
 
             }
+            
         }
     }
 
@@ -399,8 +482,14 @@ public class PlayerControllerRed2 : MonoBehaviour
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
             Debug.Log("Follow");
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
+            ///player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
+            startPoint = player;
+            endPoint = finalPath[i].GetComponent<Walkable>().transform;
 
+
+
+
+            movePlayer();
 
 
             Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
@@ -467,6 +556,15 @@ public class PlayerControllerRed2 : MonoBehaviour
     //    finalPath.Clear();
     //    walking = false;
     //}
+    private void movePlayer()
+    {
+        //player.transform.LookAt(endPoint);
+        MoveTarget = true;
+    }
 
-
+    void JumpFalse()
+    {
+        playerAnimator.SetBool("Jump", false);
+        MoveTarget = false;
+    }
 }
