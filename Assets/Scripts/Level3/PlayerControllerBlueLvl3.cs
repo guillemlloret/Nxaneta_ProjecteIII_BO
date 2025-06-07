@@ -158,20 +158,22 @@ public class PlayerControllerBlue2 : MonoBehaviour
                 currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
             }
         }
-        //if (GameManagerLvl3.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
-        //{
 
 
-        //    currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
+        if (GameManagerLvl3.Instance.DarkGreenOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallDarkGreen == true)
+        {
 
-        //}
-        //if (GameManagerLvl3.Instance.RedOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
-        //{
-        //    //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
 
-        //    currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+            currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
 
-        //}
+        }
+        if (GameManagerLvl3.Instance.DarkGreenOpen == true && currentCubeBlue.GetComponent<Walkable>().FrontWallDarkGreen == true)
+        {
+            //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
+
+            currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+
+        }
 
         foreach (WalkPath Possiblepath in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
         {

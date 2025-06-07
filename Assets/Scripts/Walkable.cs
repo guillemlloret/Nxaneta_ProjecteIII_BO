@@ -11,7 +11,8 @@ public class Walkable : MonoBehaviour
 
     public List<WalkPath> possiblePathsCopy = new List<WalkPath>();
 
-    public List<WalkPath> possiblePathsLvl3_Greenup = new List<WalkPath>(); 
+    public List<WalkPath> possiblePathsLvl3_Greenup = new List<WalkPath>();
+    public List<WalkPath> possiblePathsLvl3_Purple = new List<WalkPath>();
 
     [Space]
 
