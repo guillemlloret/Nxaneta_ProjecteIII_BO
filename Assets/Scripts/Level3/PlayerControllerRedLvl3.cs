@@ -4,6 +4,7 @@ using System.Linq;
 //using UnityEditor.VisionOS;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using System.IO;
 using System;
 using UnityEngine.Rendering;
@@ -44,11 +45,17 @@ public class PlayerControllerRed2 : MonoBehaviour
     public Transform nextCube;
     WalkPath finalCurrentCube;
     // public Transform indicator;
+    public Sprite red_Sprite;
+
 
     [Space]
 
     public List<Transform> finalPath = new List<Transform>();
     public bool SpecialMoveRed = false;
+    public bool canSpecial = true;
+    public int moves_Special = 3;
+
+    
 
 
 
@@ -94,6 +101,10 @@ public class PlayerControllerRed2 : MonoBehaviour
 
     void Update()
     {
+        if(moves_Special == 0)
+        {
+            canSpecial = false;
+        }
         if (Input.GetMouseButtonDown(0) && RedisPlaying)
         {
             //CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
@@ -143,7 +154,7 @@ public class PlayerControllerRed2 : MonoBehaviour
            
         }
 
-        if (Input.GetKeyDown(("space")) && RedisPlaying)
+        if (Input.GetKeyDown(("space")) && RedisPlaying && canSpecial)
         {
             foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
             {
@@ -178,6 +189,10 @@ public class PlayerControllerRed2 : MonoBehaviour
 
             
             SpecialMoveRed = true;
+            moves_Special = moves_Special - 1;
+           Destroy(GameManagerLvl3.Instance.specialMoveRed[moves_Special]);
+            //si tenim 3 icones per els diferents specialRed 
+            //GameManagerLvl3.Instance.image.GetComponent<Image>().sprite = red_Sprite;
             RayCastDown();
            
             

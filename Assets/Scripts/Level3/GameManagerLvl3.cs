@@ -38,6 +38,8 @@ public class GameManagerLvl3 : MonoBehaviour
 
     public bool Level3 = false;
 
+    public GameObject[] specialMoveRed = new GameObject[3];
+
 
     public static event Action<GameState2> OnGameStateChanged;
 
