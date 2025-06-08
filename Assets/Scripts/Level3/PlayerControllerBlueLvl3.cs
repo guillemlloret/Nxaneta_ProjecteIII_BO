@@ -43,6 +43,8 @@ public class PlayerControllerBlue2 : MonoBehaviour
     public Animator _animatorVerdFluix;
     public GameObject LilaWall;
     public Animator _animatorLila;
+    public GameObject wallBlocked;
+    public Animator WallBlockedanimator;
 
     [Space]
 
@@ -56,7 +58,8 @@ public class PlayerControllerBlue2 : MonoBehaviour
     {
         Instance = this;
     }
-   
+    
+
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -74,10 +77,16 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
                 foreach (WalkPath Possiblepath in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
                 {
-
-
-                    if (Possiblepath.target == clickedCubeBlue && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+                    if (Possiblepath.target == clickedCubeBlue && Possiblepath.cube.GetComponent<Walkable>().isButtonPurple && GameManagerLvl3.Instance.PurpleOccupied)
                     {
+                        //wallBlocked.SetActive(true);
+                        WallBlockedanimator.SetBool("Message", true);
+                        Debug.Log("ocupado");
+                    }
+
+
+                        else if (Possiblepath.target == clickedCubeBlue && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+                        {
 
                         currentCubeBlue.GetComponent<Walkable>().isOccupied = false;
                         FindPath();
@@ -121,7 +130,7 @@ public class PlayerControllerBlue2 : MonoBehaviour
     }
     public void ChooseTileBlue()
     {
-        TurnText.text = "Blue".ToString();
+        //TurnText.text = "Blue".ToString();
         Debug.Log("Blue is going to play");
         //clickedCubeBlue = null;
         BlueisPlaying = true;
@@ -368,6 +377,8 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
         //GameManager.Instance.UpdateGameState(GameState.RedTurn);
     }
+
+   
 
     //void Clear()
     //{

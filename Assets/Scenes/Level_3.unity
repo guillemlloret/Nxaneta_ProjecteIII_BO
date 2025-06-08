@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movements: {fileID: 1404536638}
-  TurnText: {fileID: 980034032}
+  TurnText: {fileID: 0}
   red: {fileID: 1016582295}
   player: {fileID: 48324835}
   highlightMaterial: {fileID: 2100000, guid: 541d91f6f01771a45a124d6a011c415e, type: 2}
@@ -494,7 +494,7 @@ MonoBehaviour:
     type: 2}
   walking: 0
   BlueisPlaying: 0
-  blurEffect: {fileID: 1730690463}
+  blurEffect: {fileID: 0}
   tutorialRotacio: {fileID: 145072091}
   FrontWallBlue: 0
   currentCubeBlue: {fileID: 0}
@@ -508,6 +508,8 @@ MonoBehaviour:
   _animatorVerdFluix: {fileID: 1611864855}
   LilaWall: {fileID: 555269440}
   _animatorLila: {fileID: 555269445}
+  wallBlocked: {fileID: 0}
+  WallBlockedanimator: {fileID: 555642784}
   finalPath: []
 --- !u!1 &49091215
 GameObject:
@@ -1334,7 +1336,7 @@ MonoBehaviour:
   isButtonDarkGreen: 0
   isButtonPurple: 0
   FrontWallDarkGreen: 0
-  PurpleWall: 0
+  PurpleWall: 1
   LightGreenWall: 0
   walkPointOffset: 0.02
   stairOffset: 0.4
@@ -3620,7 +3622,7 @@ MonoBehaviour:
   isButtonPurple: 0
   FrontWallDarkGreen: 0
   PurpleWall: 0
-  LightGreenWall: 0
+  LightGreenWall: 1
   walkPointOffset: 0.02
   stairOffset: 0.4
 --- !u!65 &483770244
@@ -4329,6 +4331,79 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &555642782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555642783}
+  - component: {fileID: 555642784}
+  - component: {fileID: 555642785}
+  m_Layer: 5
+  m_Name: WallBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &555642783
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555642782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1528684821}
+  - {fileID: 1838980807}
+  m_Father: {fileID: 1206956184}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &555642784
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555642782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a958c6a60eb98934ab36bf6ab78e7698, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &555642785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555642782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0244d6a2c69d5f4e92643f95e237aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallBlock: {fileID: 555642784}
 --- !u!1 &556389428
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,7 +7963,7 @@ MonoBehaviour:
   isButtonPurple: 0
   FrontWallDarkGreen: 0
   PurpleWall: 0
-  LightGreenWall: 0
+  LightGreenWall: 1
   walkPointOffset: 0.02
   stairOffset: 0.4
 --- !u!65 &935464823
@@ -8055,18 +8130,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd973c3a6d31f24591d518f353a296a, type: 3}
---- !u!114 &980034032 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1607314092806733799, guid: a50b616c9ef12f44c89da3423c53a727,
-    type: 3}
-  m_PrefabInstance: {fileID: 6917135428562701875}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1001472043
 GameObject:
   m_ObjectHideFlags: 0
@@ -8547,7 +8610,7 @@ MonoBehaviour:
     type: 2}
   walking: 0
   RedisPlaying: 0
-  blurEffect: {fileID: 1730690463}
+  blurEffect: {fileID: 0}
   paret: {fileID: 0}
   redWall: {fileID: 0}
   FrontWallRed: 0
@@ -8562,10 +8625,12 @@ MonoBehaviour:
   targetPosition: {fileID: 0}
   speed: 0.5
   nextCube: {fileID: 0}
+  red_Sprite: {fileID: 0}
   finalPath: []
   SpecialMoveRed: 0
   canSpecial: 1
   moves_Special: 3
+  wallBlocked: {fileID: 0}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   lerpSpeed: 7.31
@@ -9073,6 +9138,8 @@ MonoBehaviour:
   PurpleUp: 0
   LightGreenUp: 0
   DarkGreenOpen: 0
+  PurpleOccupied: 0
+  LightGreenOccupied: 0
   Level3: 1
   specialMoveRed:
   - {fileID: 2065300564}
@@ -9808,7 +9875,7 @@ MonoBehaviour:
   isButtonPurple: 0
   FrontWallDarkGreen: 0
   PurpleWall: 0
-  LightGreenWall: 0
+  LightGreenWall: 1
   walkPointOffset: 0.02
   stairOffset: 0.4
 --- !u!65 &1181748407
@@ -10099,6 +10166,7 @@ RectTransform:
   - {fileID: 2065300565}
   - {fileID: 1133587351}
   - {fileID: 728465215}
+  - {fileID: 555642783}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10247,7 +10315,7 @@ MonoBehaviour:
   isButtonPurple: 0
   FrontWallDarkGreen: 0
   PurpleWall: 0
-  LightGreenWall: 0
+  LightGreenWall: 1
   walkPointOffset: 0.02
   stairOffset: 0.4
 --- !u!65 &1214662458
@@ -11512,7 +11580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'End of Alpha Version
+  m_text: 'End of Beta Version
 
 
     Thank you!'
@@ -11937,6 +12005,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1470664566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1528684820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528684821}
+  - component: {fileID: 1528684823}
+  - component: {fileID: 1528684822}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1528684821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528684820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3391, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 555642783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1528684822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528684820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8113208, g: 0.13317904, b: 0.13317904, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1528684823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528684820}
+  m_CullTransparentMesh: 1
 --- !u!1 &1543052760
 GameObject:
   m_ObjectHideFlags: 0
@@ -13313,7 +13456,7 @@ MonoBehaviour:
   isButtonPurple: 0
   FrontWallDarkGreen: 0
   PurpleWall: 0
-  LightGreenWall: 0
+  LightGreenWall: 1
   walkPointOffset: 0.02
   stairOffset: 0.4
 --- !u!65 &1643077194
@@ -13764,12 +13907,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8bcc7184be8cfb4097f7c54225ef166, type: 3}
---- !u!1 &1730690463 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7590432707054182073, guid: a50b616c9ef12f44c89da3423c53a727,
-    type: 3}
-  m_PrefabInstance: {fileID: 6917135428562701875}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1743761855
 GameObject:
   m_ObjectHideFlags: 0
@@ -13849,7 +13986,7 @@ MonoBehaviour:
   isButtonDarkGreen: 0
   isButtonPurple: 0
   FrontWallDarkGreen: 0
-  PurpleWall: 0
+  PurpleWall: 1
   LightGreenWall: 0
   walkPointOffset: 0.02
   stairOffset: 0.4
@@ -14386,6 +14523,141 @@ Transform:
   - {fileID: 48324837}
   m_Father: {fileID: 1554685771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1838980806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838980807}
+  - component: {fileID: 1838980809}
+  - component: {fileID: 1838980808}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1838980807
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838980806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 555642783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1838980808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838980806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Wall is blocked by another player!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40589f7a3475ed24580c38ee49844de5, type: 2}
+  m_sharedMaterial: {fileID: 8804246965532245945, guid: 40589f7a3475ed24580c38ee49844de5,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29.97
+  m_fontSizeBase: 29.97
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1838980809
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838980806}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1840366614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14972,7 +15244,7 @@ MonoBehaviour:
   isButtonDarkGreen: 0
   isButtonPurple: 0
   FrontWallDarkGreen: 0
-  PurpleWall: 0
+  PurpleWall: 1
   LightGreenWall: 0
   walkPointOffset: 0.02
   stairOffset: 0.4

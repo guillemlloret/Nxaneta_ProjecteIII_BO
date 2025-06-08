@@ -36,6 +36,9 @@ public class GameManagerLvl3 : MonoBehaviour
     public bool LightGreenUp = false;
     public bool DarkGreenOpen = false;
 
+    public bool PurpleOccupied = false;
+    public bool LightGreenOccupied = false;
+
     public bool Level3 = false;
 
     public GameObject[] specialMoveRed = new GameObject[3];

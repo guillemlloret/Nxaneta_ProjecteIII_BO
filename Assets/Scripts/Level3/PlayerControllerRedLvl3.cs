@@ -35,6 +35,7 @@ public class PlayerControllerRed2 : MonoBehaviour
     public CharacterController _characterController;
     public Walkable CubeWalkable;
     public Animator animatorDarkGreen;
+   
 
     [Space]
 
@@ -54,6 +55,8 @@ public class PlayerControllerRed2 : MonoBehaviour
     public bool SpecialMoveRed = false;
     public bool canSpecial = true;
     public int moves_Special = 3;
+    public GameObject wallBlocked;
+
 
     
 
@@ -640,7 +643,33 @@ public class PlayerControllerRed2 : MonoBehaviour
                 GameManagerLvl3.Instance.DarkGreenOpen = false;
 
             }
-       
+
+            if (currentCube.GetComponent<Walkable>().PurpleWall == true)
+            {
+                Debug.Log("a sobre lila");
+
+                GameManagerLvl3.Instance.PurpleOccupied= true;
+
+            }
+            if (currentCube.GetComponent<Walkable>().PurpleWall == false)
+            {
+
+                GameManagerLvl3.Instance.PurpleOccupied = false;
+
+            }
+            if (currentCube.GetComponent<Walkable>().LightGreenWall == true)
+            {
+
+                GameManagerLvl3.Instance.LightGreenOccupied = true;
+
+            }
+            if (currentCube.GetComponent<Walkable>().LightGreenWall == false)
+            {
+
+                GameManagerLvl3.Instance.LightGreenOccupied = false;
+
+            }
+
             currentCube.GetComponent<Walkable>().isOccupied = true;
 
             //currentCube.GetComponent<Walkable>().possiblePaths.Clear();
