@@ -1090,6 +1090,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1585608142}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -1100,6 +1104,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &173891507
@@ -2663,6 +2673,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1585608142}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -2673,6 +2687,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &464507714
@@ -3512,7 +3532,7 @@ Transform:
   m_GameObject: {fileID: 556389428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 14.498782, y: 14.498782, z: 14.498782}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3727,6 +3747,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1001472043}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 1
@@ -3737,6 +3761,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &629897426
@@ -4208,6 +4238,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 173891504}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -4218,6 +4252,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &711877957
@@ -5230,6 +5270,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1922592276}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5240,6 +5284,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &746538081
@@ -5471,6 +5521,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 746538079}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5481,6 +5535,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &817561325
@@ -5980,6 +6040,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 813485830}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5990,6 +6054,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &856025068
@@ -6410,6 +6480,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 846045924}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -6420,6 +6494,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &1009371583
@@ -6508,6 +6588,7 @@ GameObject:
   - component: {fileID: 1016582294}
   - component: {fileID: 1016582295}
   - component: {fileID: 1016582296}
+  - component: {fileID: 1016582297}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6524,7 +6605,7 @@ Transform:
   m_GameObject: {fileID: 1016582293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03472829, y: 0.49, z: -1.4474316}
+  m_LocalPosition: {x: -0.03472829, y: 0.594, z: -1.4474316}
   m_LocalScale: {x: 0.81615, y: 0.81615, z: 0.81615}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6545,7 +6626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movements: {fileID: 1404536638}
   TurnText: {fileID: 647785184}
-  player: {fileID: 1016582293}
+  player: {fileID: 1016582294}
   highlightMaterial: {fileID: 2100000, guid: 541d91f6f01771a45a124d6a011c415e, type: 2}
   regularMaterial: {fileID: 2100000, guid: 75475174efeda8146a1600e7ab1aea22, type: 2}
   redMaterial: {fileID: 2100000, guid: 7fc204f9558accb4999ec9b94bcb9bc7, type: 2}
@@ -6557,6 +6638,7 @@ MonoBehaviour:
   walking: 0
   RedisPlaying: 0
   blurEffect: {fileID: 521120020}
+  playerAnimator: {fileID: 1016582297}
   FrontWallRed: 0
   tutorialRotacio: {fileID: 145072091}
   _characterController: {fileID: 1016582296}
@@ -6569,6 +6651,11 @@ MonoBehaviour:
   speed: 0.5
   nextCube: {fileID: 0}
   finalPath: []
+  startPoint: {fileID: 0}
+  endPoint: {fileID: 0}
+  lerpSpeed: 0
+  moveValue: 0
+  MoveTarget: 0
 --- !u!143 &1016582296
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6595,6 +6682,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &1016582297
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016582293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 412f6f700eced0d42810e1a5678d4c09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1016601448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8083,6 +8191,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1675211799}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8093,6 +8205,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1453453908
@@ -8459,6 +8577,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1967355256}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 1
@@ -8469,6 +8591,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &1578854353
@@ -8543,6 +8671,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 173891504}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8553,6 +8685,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1585608144
@@ -8786,6 +8924,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1967355256}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8796,6 +8938,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1675211801
@@ -9212,7 +9360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1755703011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10316,6 +10464,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 173891504}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 1
@@ -10326,6 +10478,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!65 &1922592279
@@ -10941,6 +11099,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1675211799}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -10951,6 +11113,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &1967803244 stripped
@@ -11588,6 +11756,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1453453906}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -11598,6 +11770,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &2051077881
@@ -12084,6 +12262,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1922592276}
     occupied: 0
+  possiblePathsLvl3: []
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 1
@@ -12094,6 +12276,12 @@ MonoBehaviour:
   isButtonBlue: 0
   FrontWallBlue: 0
   FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 0
+  PurpleWall: 0
+  LightGreenWall: 0
   walkPointOffset: 0.4
   stairOffset: 0.4
 --- !u!1 &2132721280

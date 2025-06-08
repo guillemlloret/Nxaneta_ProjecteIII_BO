@@ -80,7 +80,7 @@ public class PlayerControllerRed : MonoBehaviour
         {
             playerAnimator.SetBool("Jump", true);
 
-            player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up*0.70f, ref velocity, Time.deltaTime * lerpSpeed);
+            player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up*0.80f, ref velocity, Time.deltaTime * lerpSpeed);
         }
     }
 
@@ -384,7 +384,7 @@ public class PlayerControllerRed : MonoBehaviour
             currentCube.GetComponent<Walkable>().isOccupied = true;
 
             //currentCube.GetComponent<Walkable>().possiblePaths.Clear();
-            Debug.Log(player.transform.position);
+            //Debug.Log(player.transform.position);
 
 
         }
@@ -400,6 +400,11 @@ public class PlayerControllerRed : MonoBehaviour
         MoveTarget = true;
     }
 
+    void JumpFalse()
+    {
+        playerAnimator.SetBool("Jump", false);
+        MoveTarget = false;
+    }
 
 
     //void Clear()

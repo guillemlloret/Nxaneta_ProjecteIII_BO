@@ -606,7 +606,7 @@ MonoBehaviour:
   walking: 0
   BlueisPlaying: 0
   blurEffect: {fileID: 2031970515}
-  paret: {fileID: 0}
+  paret: {fileID: 1567921890}
   BlueWall: {fileID: 1567921890}
   tutorialRotacio: {fileID: 0}
   animatorBlueWall: {fileID: 1567921895}
@@ -1323,6 +1323,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -1693,6 +1694,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -2317,6 +2319,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -2701,6 +2704,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -3662,6 +3666,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -4152,6 +4157,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5025,6 +5031,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5353,6 +5360,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -5963,6 +5971,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -6498,6 +6507,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -6579,6 +6589,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -6753,6 +6764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016582294}
   - component: {fileID: 1016582295}
+  - component: {fileID: 1016582296}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6802,6 +6814,7 @@ MonoBehaviour:
   walking: 0
   RedisPlaying: 0
   blurEffect: {fileID: 2031970515}
+  playerAnimator: {fileID: 1016582296}
   FrontWallRed: 0
   tutorialRotacio: {fileID: 145072091}
   _characterController: {fileID: 0}
@@ -6819,6 +6832,27 @@ MonoBehaviour:
   lerpSpeed: 8.7
   moveValue: 0.007
   MoveTarget: 0
+--- !u!95 &1016582296
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016582293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 412f6f700eced0d42810e1a5678d4c09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1016601448
 GameObject:
   m_ObjectHideFlags: 0
@@ -7972,6 +8006,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -8721,6 +8756,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -9393,6 +9429,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -9651,6 +9688,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -10203,6 +10241,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -10532,6 +10571,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -11536,6 +11576,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -12026,6 +12067,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -12228,6 +12270,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -12738,6 +12781,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -13017,6 +13061,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -13522,6 +13567,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -13706,6 +13752,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
@@ -13858,6 +13905,7 @@ MonoBehaviour:
   possiblePathsLvl3: []
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup: []
+  possiblePathsLvl3_Purple: []
   previousBlock: {fileID: 0}
   isStair: 0
   isButton: 0
