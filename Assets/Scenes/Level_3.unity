@@ -1290,9 +1290,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1922592276}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 1145084136}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 1145084135}
     occupied: 0
   possiblePathsLvl3:
   - target: {fileID: 1743761860}
@@ -1303,19 +1303,15 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
-    active: 1
-    cube: {fileID: 382421711}
-    occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:
   - target: {fileID: 739723917}
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 0}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 0}
     occupied: 0
   - target: {fileID: 1743761860}
     active: 1
@@ -2647,167 +2643,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369790085}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &382421711
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 382421712}
-  - component: {fileID: 382421716}
-  - component: {fileID: 382421715}
-  - component: {fileID: 382421714}
-  - component: {fileID: 382421713}
-  m_Layer: 0
-  m_Name: 4,2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &382421712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382421711}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.41182113, z: 0.9}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1554685771}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &382421713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382421711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c3b50f30c2d1ea489c7ed078227cf1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePaths:
-  - target: {fileID: 1343809800}
-    active: 1
-    cube: {fileID: 1343809799}
-    occupied: 0
-  - target: {fileID: 173891505}
-    active: 1
-    cube: {fileID: 173891504}
-    occupied: 0
-  - target: {fileID: 659802121}
-    active: 1
-    cube: {fileID: 659802120}
-    occupied: 0
-  possiblePathsLvl3:
-  - target: {fileID: 739723917}
-    active: 1
-    cube: {fileID: 739723916}
-    occupied: 0
-  possiblePathsCopy: []
-  possiblePathsLvl3_Greenup:
-  - target: {fileID: 739723917}
-    active: 1
-    cube: {fileID: 739723916}
-    occupied: 0
-  possiblePathsLvl3_Purple: []
-  previousBlock: {fileID: 0}
-  isStair: 0
-  isButton: 0
-  isOccupied: 0
-  finalRed: 0
-  finalBlue: 1
-  isButtonRed: 0
-  isButtonBlue: 0
-  FrontWallBlue: 0
-  FrontWallRed: 0
-  isButtonLightGreen: 0
-  isButtonDarkGreen: 0
-  isButtonPurple: 0
-  FrontWallDarkGreen: 0
-  PurpleWall: 0
-  LightGreenWall: 0
-  walkPointOffset: 0.02
-  stairOffset: 0.4
---- !u!65 &382421714
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382421711}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &382421715
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382421711}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 494754d6e06d7f648849d6ac940e5aaa, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &382421716
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382421711}
-  m_Mesh: {fileID: -2394192531524080919, guid: 843c8aca6f4fb8d47bb14fd80f74ce4a, type: 3}
 --- !u!4 &401622833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c282c8a6c71f94458531bf78dc2ee03,
@@ -5258,9 +5093,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1585608142}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 1145084136}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 1145084135}
     occupied: 0
   possiblePathsLvl3: []
   possiblePathsCopy: []
@@ -5496,26 +5331,26 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1967355256}
     occupied: 0
-  - target: {fileID: 173891505}
-    active: 1
-    cube: {fileID: 173891504}
-    occupied: 0
   - target: {fileID: 2092198977}
     active: 1
     cube: {fileID: 2092198973}
+    occupied: 0
+  - target: {fileID: 173891505}
+    active: 1
+    cube: {fileID: 173891504}
     occupied: 0
   possiblePathsLvl3:
   - target: {fileID: 813485834}
     active: 1
     cube: {fileID: 813485830}
     occupied: 0
+  - target: {fileID: 1145084136}
+    active: 1
+    cube: {fileID: 1145084135}
+    occupied: 0
   - target: {fileID: 739723917}
     active: 1
     cube: {fileID: 739723916}
-    occupied: 0
-  - target: {fileID: 382421712}
-    active: 1
-    cube: {fileID: 382421711}
     occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:
@@ -5527,9 +5362,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 0}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 0}
     occupied: 0
   possiblePathsLvl3_Purple:
   - target: {fileID: 813485834}
@@ -6429,19 +6264,19 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 2108365609}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 1145084136}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 1145084135}
     occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:
+  - target: {fileID: 1145084136}
+    active: 1
+    cube: {fileID: 1145084135}
+    occupied: 0
   - target: {fileID: 2108365610}
     active: 1
     cube: {fileID: 2108365609}
-    occupied: 0
-  - target: {fileID: 382421712}
-    active: 1
-    cube: {fileID: 382421711}
     occupied: 0
   possiblePathsLvl3_Purple:
   - target: {fileID: 711362646}
@@ -8578,7 +8413,7 @@ Transform:
   m_GameObject: {fileID: 1016582293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.06, y: 0.80999994, z: -1.03}
+  m_LocalPosition: {x: -1.03, y: 0.80999994, z: -2.08}
   m_LocalScale: {x: 0.81615007, y: 0.81615007, z: 0.81615007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9452,6 +9287,167 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133587350}
   m_CullTransparentMesh: 1
+--- !u!1 &1145084135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145084136}
+  - component: {fileID: 1145084140}
+  - component: {fileID: 1145084139}
+  - component: {fileID: 1145084138}
+  - component: {fileID: 1145084137}
+  m_Layer: 0
+  m_Name: 4,2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145084136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145084135}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.41182113, z: 0.9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1554685771}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1145084137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145084135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3b50f30c2d1ea489c7ed078227cf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePaths:
+  - target: {fileID: 173891505}
+    active: 1
+    cube: {fileID: 173891504}
+    occupied: 0
+  possiblePathsLvl3:
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  possiblePathsCopy: []
+  possiblePathsLvl3_Greenup:
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
+    occupied: 0
+  - target: {fileID: 0}
+    active: 1
+    cube: {fileID: 0}
+    occupied: 0
+  - target: {fileID: 1743761860}
+    active: 1
+    cube: {fileID: 1743761855}
+    occupied: 0
+  possiblePathsLvl3_Purple: []
+  previousBlock: {fileID: 0}
+  isStair: 0
+  isButton: 0
+  isOccupied: 0
+  finalRed: 0
+  finalBlue: 1
+  isButtonRed: 0
+  isButtonBlue: 0
+  FrontWallBlue: 0
+  FrontWallRed: 0
+  isButtonLightGreen: 0
+  isButtonDarkGreen: 0
+  isButtonPurple: 0
+  FrontWallDarkGreen: 1
+  PurpleWall: 0
+  LightGreenWall: 0
+  walkPointOffset: 0.02
+  stairOffset: 0.4
+--- !u!65 &1145084138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145084135}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1145084139
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145084135}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 494754d6e06d7f648849d6ac940e5aaa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1145084140
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145084135}
+  m_Mesh: {fileID: -2394192531524080919, guid: 843c8aca6f4fb8d47bb14fd80f74ce4a, type: 3}
 --- !u!1 &1148487403
 GameObject:
   m_ObjectHideFlags: 0
@@ -11228,9 +11224,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1111043132}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 0}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 0}
     occupied: 0
   - target: {fileID: 1922592277}
     active: 1
@@ -12055,7 +12051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.13317904, b: 0.13317904, a: 0.392}
+  m_Color: {r: 0.8113208, g: 0.13317904, b: 0.13317904, a: 0.69803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12244,6 +12240,7 @@ Transform:
   - {fileID: 711362646}
   - {fileID: 464507717}
   - {fileID: 173891505}
+  - {fileID: 1145084136}
   - {fileID: 1585608147}
   - {fileID: 2092198977}
   - {fileID: 1569347821}
@@ -12252,7 +12249,6 @@ Transform:
   - {fileID: 1743761860}
   - {fileID: 1111043133}
   - {fileID: 1343809800}
-  - {fileID: 382421712}
   - {fileID: 659802121}
   - {fileID: 1020648645}
   - {fileID: 1922592277}
@@ -13961,6 +13957,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 1111043132}
     occupied: 0
+  - target: {fileID: 173891505}
+    active: 1
+    cube: {fileID: 173891504}
+    occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:
   - target: {fileID: 2108365610}
@@ -14608,8 +14608,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.97
-  m_fontSizeBase: 29.97
+  m_fontSize: 27.46
+  m_fontSizeBase: 27.46
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15722,9 +15722,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 1145084136}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 1145084135}
     occupied: 0
   - target: {fileID: 483770247}
     active: 1
@@ -15748,9 +15748,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 0}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 0}
     occupied: 0
   possiblePathsLvl3_Purple:
   - target: {fileID: 711362646}
@@ -16849,9 +16849,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 1145084136}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 1145084135}
     occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:
@@ -16859,9 +16859,9 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 739723916}
     occupied: 0
-  - target: {fileID: 382421712}
+  - target: {fileID: 0}
     active: 1
-    cube: {fileID: 382421711}
+    cube: {fileID: 0}
     occupied: 0
   possiblePathsLvl3_Purple:
   - target: {fileID: 711362646}
@@ -17933,6 +17933,10 @@ MonoBehaviour:
   - target: {fileID: 1111043133}
     active: 1
     cube: {fileID: 1111043132}
+    occupied: 0
+  - target: {fileID: 739723917}
+    active: 1
+    cube: {fileID: 739723916}
     occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:

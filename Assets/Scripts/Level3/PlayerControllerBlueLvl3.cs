@@ -83,9 +83,15 @@ public class PlayerControllerBlue2 : MonoBehaviour
                         WallBlockedanimator.SetBool("Message", true);
                         Debug.Log("ocupado");
                     }
+                    else if (Possiblepath.target == clickedCubeBlue && Possiblepath.cube.GetComponent<Walkable>().isButtonLightGreen && GameManagerLvl3.Instance.LightGreenOccupied)
+                    {
+                        //wallBlocked.SetActive(true);
+                        WallBlockedanimator.SetBool("Message", true);
+                        Debug.Log("ocupado");
+                    }
 
 
-                        else if (Possiblepath.target == clickedCubeBlue && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+                    else if (Possiblepath.target == clickedCubeBlue && !Possiblepath.cube.GetComponent<Walkable>().isOccupied)
                         {
 
                         currentCubeBlue.GetComponent<Walkable>().isOccupied = false;
@@ -305,6 +311,11 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
         walking = true;
 
+        foreach(WalkPath path in currentCubeBlue.GetComponent<Walkable>().possiblePaths)
+        {
+            path.cube.GetComponent<Walkable>().isOccupied = false;
+        }
+        //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
             player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
@@ -370,6 +381,7 @@ public class PlayerControllerBlue2 : MonoBehaviour
 
         //}
         currentCubeBlue.GetComponent<Walkable>().isOccupied = true;
+        
 
 
         finalPath.Clear();

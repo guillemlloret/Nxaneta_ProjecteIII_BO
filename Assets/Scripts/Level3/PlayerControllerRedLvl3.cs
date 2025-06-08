@@ -168,6 +168,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 
                     Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = regularMaterial;
                 }
+                
             }
 
             if (GameManagerLvl3.Instance.LightGreenUp == true)
@@ -261,65 +262,64 @@ public class PlayerControllerRed2 : MonoBehaviour
             }
         }
 
-        //if (GameManagerLvl3.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)
-        //{
-
-
-        //    currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
-
-        //}
-        //if (GameManagerLvl3.Instance.BlueOpen == true && currentCube.GetComponent<Walkable>().FrontWallRed == true)
-        //{
-        //    //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
-
-        //    currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
-
-        //}
-
-        //CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
-
-        if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == false && GameManagerLvl3.Instance.PurpleUp == false)
+        if (GameManagerLvl3.Instance.DarkGreenOpen == false && currentCube.GetComponent<Walkable>().FrontWallDarkGreen == true && !SpecialMoveRed)
         {
-            Debug.Log("SpecialRed");
-
-            foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePathsLvl3)
-            {
-                if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
-                {
-                    //Possibles caselles
-                    Debug.Log(Possiblepath.target);
-
-                    //fa be el debug del material
-                    Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial);
-
-                    //Sempre entra nomes al primer bucle
 
 
-                    if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
-                    {
-                        Debug.Log("regular");
-                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
-                    }
-                    else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
-                    {
-                        //    Debug.Log("rojoH");
+            //currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = true;
 
-                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
-                    }
-                    else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
-                    {
-                        Debug.Log("blueH");
-
-                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
-                    }
-
-
-
-                }
-
-
-            }
         }
+        if (GameManagerLvl3.Instance.DarkGreenOpen == true && currentCube.GetComponent<Walkable>().FrontWallDarkGreen == true && !SpecialMoveRed)
+        {
+            //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].active = false;
+
+            //currentCube.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
+
+        }
+        
+
+        //if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == false && GameManagerLvl3.Instance.PurpleUp == false)
+        //{
+        //    Debug.Log("SpecialRed");
+
+        //    foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePathsLvl3)
+        //    {
+        //        if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+        //        {
+        //            //Possibles caselles
+        //            Debug.Log(Possiblepath.target);
+
+        //            //fa be el debug del material
+        //            Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial);
+
+        //            //Sempre entra nomes al primer bucle
+
+
+        //            if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
+        //            {
+        //                Debug.Log("regular");
+        //                Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
+        //            }
+        //            else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
+        //            {
+        //                //    Debug.Log("rojoH");
+
+        //                Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
+        //            }
+        //            else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
+        //            {
+        //                Debug.Log("blueH");
+
+        //                Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
+        //            }
+
+
+
+        //        }
+
+
+        //    }
+        //}
         else if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == true && GameManagerLvl3.Instance.PurpleUp == false)
         {
             Debug.Log("SpecialRed-GreenUp");
@@ -364,49 +364,49 @@ public class PlayerControllerRed2 : MonoBehaviour
             }
         }
 
-        else if (SpecialMoveRed && GameManagerLvl3.Instance.PurpleUp == false)
+        else if (SpecialMoveRed && GameManagerLvl3.Instance.PurpleUp == false && GameManagerLvl3.Instance.LightGreenUp == false)
         {
             Debug.Log("SpecialRed_Purple");
 
 
             foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePathsLvl3)
+        {
+            if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
             {
-                if (!Possiblepath.cube.GetComponent<Walkable>().isOccupied)
+                //Possibles caselles
+                Debug.Log(Possiblepath.target);
+
+                //fa be el debug del material
+                Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial);
+
+                //Sempre entra nomes al primer bucle
+
+
+                if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
                 {
-                    //Possibles caselles
-                    Debug.Log(Possiblepath.target);
+                    Debug.Log("regular");
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
+                }
+                else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
+                {
+                    //    Debug.Log("rojoH");
 
-                    //fa be el debug del material
-                    Debug.Log(Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial);
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
+                }
+                else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
+                {
+                    Debug.Log("blueH");
 
-                    //Sempre entra nomes al primer bucle
-
-
-                    if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == regularMaterial)
-                    {
-                        Debug.Log("regular");
-                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterial;
-                    }
-                    else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == redMaterial)
-                    {
-                        //    Debug.Log("rojoH");
-
-                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialRed;
-                    }
-                    else if (Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial == blueMaterial)
-                    {
-                        Debug.Log("blueH");
-
-                        Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
-                    }
-
-
-
+                    Possiblepath.cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMaterialBlue;
                 }
 
 
+
             }
+
+
         }
+    }
         else if (SpecialMoveRed && GameManagerLvl3.Instance.PurpleUp == true)
         {
             Debug.Log("SpecialRed-GreenUp");
@@ -590,6 +590,11 @@ public class PlayerControllerRed2 : MonoBehaviour
     {
 
         walking = true;
+
+        foreach (WalkPath path in currentCube.GetComponent<Walkable>().possiblePaths)
+        {
+            path.cube.GetComponent<Walkable>().isOccupied = false;
+        }
 
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
