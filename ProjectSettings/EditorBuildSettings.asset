@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_2.unity
     guid: 9590cf51c55ea2141a242ed9228f5fba
+  - enabled: 1
+    path: Assets/Scenes/Animacio_Inicial.unity
+    guid: 79c5af810b0ad6f489954bf1696e2f54
   m_configObjects: {}
