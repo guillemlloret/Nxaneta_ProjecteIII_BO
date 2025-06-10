@@ -118,6 +118,7 @@ public class PlayerControllerRed2 : MonoBehaviour
             if (Physics.Raycast(mouseRay, out mouseHit))
             {
                 clickedCube = mouseHit.transform;
+                Debug.Log("clcikedCUbe="+ clickedCube);
 
                 foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePaths)
                 {
@@ -135,7 +136,8 @@ public class PlayerControllerRed2 : MonoBehaviour
                         if (GameManagerLvl3.Instance.BlueWon == true && GameManagerLvl3.Instance.RedWon == false)
                         {
                             Debug.Log("BlueWon");
-
+                            //currentCube = null;
+                            //clickedCube = null;
                             GameManagerLvl3.Instance.UpdateGameState(GameState2.RedTurn);
                             RedisPlaying = true;
 
@@ -254,11 +256,20 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         if (Physics.Raycast(playerRay, out playerHit))
         {
-            if (playerHit.transform.GetComponent<Walkable>() != null)
+            if (playerHit.transform.GetComponent<Walkable>() != null && GameManagerLvl3.Instance.BlueWon == false)
             {
                 currentCube = playerHit.transform;
                 CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                Debug.Log("currentCube=" + currentCube);
 
+                //CubeWalkable.MakeOccupied2(CubeWalkable);
+
+            }
+            else if (playerHit.transform.GetComponent<Walkable>() != null && GameManagerLvl3.Instance.BlueWon == true)
+            {
+                currentCube = currentCube.transform;
+                CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                Debug.Log("currentCube=" + currentCube);
 
                 //CubeWalkable.MakeOccupied2(CubeWalkable);
 
@@ -683,11 +694,14 @@ public class PlayerControllerRed2 : MonoBehaviour
             //currentCube.GetComponent<Walkable>().possiblePaths.Clear();
             Debug.Log(player.transform.position);
 
-
+            Debug.Log("final Cube=" + currentCube);
         }
 
         finalPath.Clear();
+
         CubeWalkable.possiblePaths = CubeWalkable.possiblePathsCopy;
+
+
 
         //CubeWalkable.possiblePathsCopy.Clear();
 

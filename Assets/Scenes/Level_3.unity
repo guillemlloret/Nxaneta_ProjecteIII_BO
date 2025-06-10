@@ -10121,6 +10121,10 @@ MonoBehaviour:
     active: 1
     cube: {fileID: 846045924}
     occupied: 0
+  - target: {fileID: 483770247}
+    active: 1
+    cube: {fileID: 483770242}
+    occupied: 0
   possiblePathsCopy: []
   possiblePathsLvl3_Greenup:
   - target: {fileID: 2001991736}
