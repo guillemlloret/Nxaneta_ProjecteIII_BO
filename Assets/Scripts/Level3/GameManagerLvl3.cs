@@ -43,6 +43,11 @@ public class GameManagerLvl3 : MonoBehaviour
 
     public GameObject[] specialMoveRed = new GameObject[3];
 
+    public Sprite red_Sprite2;
+    public Sprite red_Sprite1;
+    public Sprite red_Sprite0;
+    public int RedSpecial = 3;
+
 
     public static event Action<GameState2> OnGameStateChanged;
 
@@ -102,7 +107,23 @@ public class GameManagerLvl3 : MonoBehaviour
     {
         Debug.Log("Change state to red");
         PlayerControllerRed2.Instance.ChooseTileRed();
-        image.GetComponent<Image>().sprite = red_Sprite;
+
+        if(RedSpecial == 2)
+        {
+            image.GetComponent<Image>().sprite = red_Sprite2;
+        }
+        else if (RedSpecial == 1) 
+        {
+            image.GetComponent<Image>().sprite = red_Sprite1;
+        }
+        else if (RedSpecial <= 0)
+        {
+            image.GetComponent<Image>().sprite = red_Sprite0;
+        }
+        else
+        {
+            image.GetComponent<Image>().sprite = red_Sprite;
+        }
 
 
     }

@@ -177,7 +177,7 @@ public class PlayerControllerRed2 : MonoBehaviour
                 CubeWalkable.possiblePaths = CubeWalkable.possiblePathsLvl3_Greenup;
             }
 
-            if (GameManagerLvl3.Instance.PurpleUp == true)
+            else if (GameManagerLvl3.Instance.PurpleUp == true)
             {
                 Debug.Log("purpleUp");
                 CubeWalkable.possiblePathsCopy = CubeWalkable.possiblePaths;
@@ -194,6 +194,7 @@ public class PlayerControllerRed2 : MonoBehaviour
             
             SpecialMoveRed = true;
             moves_Special = moves_Special - 1;
+            GameManagerLvl3.Instance.RedSpecial -= 1;
            Destroy(GameManagerLvl3.Instance.specialMoveRed[moves_Special]);
             //si tenim 3 icones per els diferents specialRed 
             //GameManagerLvl3.Instance.image.GetComponent<Image>().sprite = red_Sprite;
@@ -320,7 +321,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         //    }
         //}
-        else if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == true && GameManagerLvl3.Instance.PurpleUp == false)
+        else if (SpecialMoveRed && GameManagerLvl3.Instance.LightGreenUp == true )
         {
             Debug.Log("SpecialRed-GreenUp");
 
@@ -366,7 +367,7 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         else if (SpecialMoveRed && GameManagerLvl3.Instance.PurpleUp == false && GameManagerLvl3.Instance.LightGreenUp == false)
         {
-            Debug.Log("SpecialRed_Purple");
+            
 
 
             foreach (WalkPath Possiblepath in currentCube.GetComponent<Walkable>().possiblePathsLvl3)

@@ -41,4 +41,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+
+    public void LoadSceneEtapa2()
+    {
+        Debug.Log("ha entrado en la funcion");
+        SceneManager.LoadScene(5);
+    }
 }

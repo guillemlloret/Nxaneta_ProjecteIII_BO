@@ -47,6 +47,7 @@ public class PlayerControllerRed : MonoBehaviour
     public Transform nextCube;
     WalkPath finalCurrentCube;
     // public Transform indicator;
+    public Animator animatorParet;
 
     [Space]
 
@@ -364,7 +365,7 @@ public class PlayerControllerRed : MonoBehaviour
             //puja la paret
             if (currentCube.GetComponent<Walkable>().isButton == true)
             {
-                
+                animatorParet.SetBool("pujarParet", true);
                 tutorialRotacio.SetActive(true);
                 blurEffect.SetActive(true);
             }

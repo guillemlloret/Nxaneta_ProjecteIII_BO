@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Animacio_Inicial.unity
     guid: 79c5af810b0ad6f489954bf1696e2f54
+  - enabled: 1
+    path: Assets/Scenes/Animacio_etapa1.unity
+    guid: 420e128b77f6e56488312b5b7c9a288d
+  - enabled: 1
+    path: Assets/Scenes/Level_3.unity
+    guid: 657aad455eee7ee4886874a59063ee33
   m_configObjects: {}
