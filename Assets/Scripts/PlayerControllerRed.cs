@@ -27,8 +27,10 @@ public class PlayerControllerRed : MonoBehaviour
     public bool RedisPlaying = false;
     public GameObject blurEffect;
     public Animator playerAnimator;
+    public Walkable CubeWalkable;
 
-    
+
+
     public bool FrontWallRed = false;
     public GameObject tutorialRotacio;
   
@@ -164,15 +166,34 @@ public class PlayerControllerRed : MonoBehaviour
 
         if (Physics.Raycast(playerRay, out playerHit))
         {
-            if (playerHit.transform.GetComponent<Walkable>() != null)
+            if (playerHit.transform.GetComponent<Walkable>() != null && GameManager.Instance.BlueWon == false)
             {
                 currentCube = playerHit.transform;
-                Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
-                
+                CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                Debug.Log("currentCube=" + currentCube);
 
-                CubeWalkable.MakeOccupied(CubeWalkable);
+                //CubeWalkable.MakeOccupied2(CubeWalkable);
 
             }
+            else if (playerHit.transform.GetComponent<Walkable>() != null && GameManager.Instance.BlueWon == true)
+            {
+                currentCube = currentCube.transform;
+                CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                Debug.Log("currentCube=" + currentCube);
+
+                //CubeWalkable.MakeOccupied2(CubeWalkable);
+
+            }
+
+            //if (playerHit.transform.GetComponent<Walkable>() != null)
+            //{
+            //    currentCube = playerHit.transform;
+            //    Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                
+
+            //    CubeWalkable.MakeOccupied(CubeWalkable);
+
+            //}
         }
 
         if (GameManager.Instance.BlueOpen == false && currentCube.GetComponent<Walkable>().FrontWallRed == true)

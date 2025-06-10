@@ -24,6 +24,8 @@ public class PlayerControllerBlue : MonoBehaviour
     public bool BlueisPlaying = false;
     public GameObject blurEffect;
 
+    public Walkable CubeWalkable;
+
     public GameObject paret;
     public GameObject BlueWall;
     public GameObject tutorialRotacio;
@@ -167,12 +169,23 @@ public class PlayerControllerBlue : MonoBehaviour
 
             if (Physics.Raycast(playerRay, out playerHit))
         {
-            if (playerHit.transform.GetComponent<Walkable>() != null)
+            if (playerHit.transform.GetComponent<Walkable>() != null && GameManager.Instance.RedWon == false)
             {
                 currentCubeBlue = playerHit.transform;
-                Walkable CubeWalkable = playerHit.transform.GetComponent<Walkable>();
-                CubeWalkable.MakeOccupied(CubeWalkable);
-                currentCubeBlue.GetComponent <Walkable>().isOccupied = true;
+                CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                Debug.Log("currentCube=" + currentCubeBlue);
+
+                //CubeWalkable.MakeOccupied2(CubeWalkable);
+
+            }
+            else if (playerHit.transform.GetComponent<Walkable>() != null && GameManager.Instance.RedWon == true)
+            {
+                currentCubeBlue = currentCubeBlue.transform;
+                CubeWalkable = playerHit.transform.GetComponent<Walkable>();
+                Debug.Log("currentCube=" + currentCubeBlue);
+
+                //CubeWalkable.MakeOccupied2(CubeWalkable);
+
             }
         }
         if (GameManager.Instance.RedOpen == false && currentCubeBlue.GetComponent<Walkable>().FrontWallBlue == true)
