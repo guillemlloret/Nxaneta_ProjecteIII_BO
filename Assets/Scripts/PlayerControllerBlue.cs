@@ -4,6 +4,7 @@ using System.Linq;
 //using UnityEditor.VisionOS;
 using UnityEngine;
 using TMPro;
+using System;
 
 
 public class PlayerControllerBlue : MonoBehaviour
@@ -12,7 +13,7 @@ public class PlayerControllerBlue : MonoBehaviour
     [SerializeField] TMP_Text TurnText;
     public static PlayerControllerBlue Instance;
     public PlayerControllerRed red;
-    public GameObject player;
+    public Transform player;
     public Material highlightMaterial;
     public Material regularMaterial;
     public Material blueMaterial;
@@ -42,7 +43,18 @@ public class PlayerControllerBlue : MonoBehaviour
     public List<Transform> finalPath = new List<Transform>();
 
     private float blend;
+    public Transform startPoint;
 
+    public Transform endPoint;
+
+
+
+    [Range(0, 10)] public float lerpSpeed;
+
+    public float moveValue;
+    public bool MoveTarget = false;
+
+    Vector3 velocity = new Vector3(0, 0, 0);
     void Awake()
     {
         Instance = this;
@@ -55,7 +67,15 @@ public class PlayerControllerBlue : MonoBehaviour
         animatorBlueWall = BlueWall.GetComponent<Animator>();
         animatorParet.SetBool("pujarParet", false);
     }
+    private void FixedUpdate()
+    {
+        if (MoveTarget)
+        {
+            //playerAnimator.SetBool("Jump", true);
 
+            player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up * 0.80f, ref velocity, Time.deltaTime * lerpSpeed);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -293,7 +313,16 @@ public class PlayerControllerBlue : MonoBehaviour
 
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.70f;
+            startPoint = player;
+            endPoint = finalPath[i].GetComponent<Walkable>().transform;
+
+
+
+
+            movePlayer();
+
+            Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
+
             currentCubeBlue = finalPath[i];
 
             if (currentCubeBlue.GetComponent<Walkable>().finalBlue == true)
@@ -341,6 +370,11 @@ public class PlayerControllerBlue : MonoBehaviour
        
     
         //GameManager.Instance.UpdateGameState(GameState.RedTurn);
+    }
+
+    private void movePlayer()
+    {
+        MoveTarget = true;
     }
 
     //void Clear()

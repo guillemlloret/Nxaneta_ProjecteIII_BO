@@ -90,7 +90,8 @@ public class PlayerControllerRed2 : MonoBehaviour
     {
         if (MoveTarget)
         {
-            playerAnimator.SetBool("Jump", true);
+            //playerAnimator.SetBool("Jump", true);
+           
             player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up * 0.60f, ref velocity, Time.deltaTime * lerpSpeed);
             
         }
@@ -136,6 +137,7 @@ public class PlayerControllerRed2 : MonoBehaviour
                             Debug.Log("BlueWon");
 
                             GameManagerLvl3.Instance.UpdateGameState(GameState2.RedTurn);
+                            RedisPlaying = true;
 
                         }
                         else if (GameManagerLvl3.Instance.RedWon == true && GameManagerLvl3.Instance.BlueWon == true)
@@ -603,7 +605,7 @@ public class PlayerControllerRed2 : MonoBehaviour
             ///player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
             startPoint = player;
             endPoint = finalPath[i].GetComponent<Walkable>().transform;
-
+            //player.transform.rotation = Quaternion.Euler(0, 90, 0);
 
 
 
@@ -686,6 +688,8 @@ public class PlayerControllerRed2 : MonoBehaviour
 
         finalPath.Clear();
         CubeWalkable.possiblePaths = CubeWalkable.possiblePathsCopy;
+
+        //CubeWalkable.possiblePathsCopy.Clear();
 
 
     }

@@ -4,6 +4,7 @@ using System.Linq;
 //using UnityEditor.VisionOS;
 using UnityEngine;
 using TMPro;
+using System;
 
 
 public class PlayerControllerBlue2 : MonoBehaviour
@@ -12,7 +13,7 @@ public class PlayerControllerBlue2 : MonoBehaviour
     [SerializeField] TMP_Text TurnText;
     public static PlayerControllerBlue2 Instance;
     public PlayerControllerRed2 red;
-    public GameObject player;
+    public Transform player;
     public Material highlightMaterial;
     public Material regularMaterial;
     public Material blueMaterial;
@@ -51,14 +52,35 @@ public class PlayerControllerBlue2 : MonoBehaviour
     public List<Transform> finalPath = new List<Transform>();
 
     private float blend;
+    public Transform startPoint;
+
+    public Transform endPoint;
 
 
-    
+
+    [Range(0, 10)] public float lerpSpeed;
+
+    public float moveValue;
+    public bool MoveTarget = false;
+
+    Vector3 velocity = new Vector3(0, 0, 0);
+    public Animator playerAnimator;
+
+
     void Awake()
     {
         Instance = this;
     }
-    
+    private void FixedUpdate()
+    {
+        if (MoveTarget)
+        {
+            //playerAnimator.SetBool("Jump", true);
+
+            player.transform.position = Vector3.SmoothDamp(startPoint.position, endPoint.position + transform.up * 0.60f, ref velocity, Time.deltaTime * lerpSpeed);
+
+        }
+    }
 
     // Start is called before the first frame update
 
@@ -114,6 +136,7 @@ public class PlayerControllerBlue2 : MonoBehaviour
                         {
                             GameManagerLvl3.Instance.UpdateGameState(GameState2.RedTurn);
                             BlueisPlaying = false;
+
                         }
                     }
                 }
@@ -318,7 +341,15 @@ public class PlayerControllerBlue2 : MonoBehaviour
         //currentCubeBlue.GetComponent<Walkable>().possiblePaths[2].cube.GetComponent<Walkable>().isOccupied = false;
         for (int i = finalPath.Count - 1; i >= 0; --i)
         {
-            player.transform.position = finalPath[i].GetComponent<Walkable>().transform.position + transform.up * 0.60f;
+            startPoint = player;
+            endPoint = finalPath[i].GetComponent<Walkable>().transform;
+            //player.transform.rotation = Quaternion.Euler(0, 90, 0);
+
+
+
+            movePlayer();
+            Debug.Log(finalPath[i].GetComponent<Walkable>().transform.position);
+
             currentCubeBlue = finalPath[i];
 
             if (currentCubeBlue.GetComponent<Walkable>().finalBlue == true)
@@ -390,7 +421,12 @@ public class PlayerControllerBlue2 : MonoBehaviour
         //GameManager.Instance.UpdateGameState(GameState.RedTurn);
     }
 
-   
+    private void movePlayer()
+    {
+        MoveTarget = true;
+    }
+
+
 
     //void Clear()
     //{

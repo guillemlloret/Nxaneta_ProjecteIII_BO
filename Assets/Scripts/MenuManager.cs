@@ -47,4 +47,10 @@ public class MenuManager : MonoBehaviour
         Debug.Log("ha entrado en la funcion");
         SceneManager.LoadScene(5);
     }
+
+    public void ReloadEtapa2()
+    {
+        Debug.Log("ha entrado en la funcion");
+        SceneManager.LoadScene(6);
+    }
 }
