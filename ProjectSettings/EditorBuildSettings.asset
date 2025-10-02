@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_3.unity
     guid: 657aad455eee7ee4886874a59063ee33
+  - enabled: 1
+    path: Assets/Scenes/Structure_Duetto/Seleccio_Nivells.unity
+    guid: 82132292c4513bc44b477b7c69963997
   m_configObjects: {}

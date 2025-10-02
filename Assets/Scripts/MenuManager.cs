@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject Restart;
     public static  MenuManager Instance;
 
     [SerializeField] private GameObject _colorSelectPanel;
@@ -14,6 +15,7 @@ public class MenuManager : MonoBehaviour
     {
         Instance = this;
         GameManager.OnGameStateChanged += GameManagerOnOnGameStateChanged;
+        Restart.SetActive(false);
     }
 
     void OnDestroy()
@@ -52,5 +54,14 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("ha entrado en la funcion");
         SceneManager.LoadScene(6);
+    }
+
+    public void ShowPause()
+    {
+        Restart.SetActive(true);
+    }
+    public void HidePause()
+    {
+        Restart.SetActive(false);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,9 +11,10 @@ public class MenuManagerLvl3 : MonoBehaviour
 
     [SerializeField] private GameObject _colorSelectPanel;
 
-
+    public GameObject Restart3;
     void Awake()
     {
+        Restart3.SetActive(false);
         Instance = this;
         GameManagerLvl3.OnGameStateChanged += GameManagerOnOnGameStateChanged;
     }
@@ -36,10 +38,19 @@ public class MenuManagerLvl3 : MonoBehaviour
     }
     public void RetryScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
     public void RetryScene2()
     {
         SceneManager.LoadScene(3);
+    }
+
+    public void ShowPauseLvl3()
+    {
+        Restart3.SetActive(true);
+    }
+    public void HidePauseLvl3()
+    {
+        Restart3.SetActive(false);
     }
 }

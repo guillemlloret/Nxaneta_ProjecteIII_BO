@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 263055520}
   - component: {fileID: 263055521}
   m_Layer: 5
-  m_Name: 'Settings_Button '
+  m_Name: 'Levels_Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,14 +753,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 263055521}
-        m_TargetAssemblyTypeName: Quit_PopUp, Assembly-CSharp
-        m_MethodName: OpenSettingsPanel
-        m_Mode: 1
+      - m_Target: {fileID: 697671235}
+        m_TargetAssemblyTypeName: Loading_Screen, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2290,7 +2290,7 @@ GameObject:
   - component: {fileID: 901830370}
   - component: {fileID: 901830372}
   m_Layer: 5
-  m_Name: SETTINGS
+  m_Name: LEVEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2335,7 +2335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Select Level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5753c8e3dceb3d4c8478d49a3ef74d1, type: 2}
   m_sharedMaterial: {fileID: -3019924620406781246, guid: c5753c8e3dceb3d4c8478d49a3ef74d1,

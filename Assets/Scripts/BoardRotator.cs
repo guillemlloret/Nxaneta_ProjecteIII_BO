@@ -30,7 +30,7 @@ public class BoardRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("q"))
+        if (Input.GetKeyDown("e"))
         {
             if (board.transform.eulerAngles.y == 0)
             {
@@ -66,7 +66,7 @@ public class BoardRotator : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("q"))
         {
             if (board.transform.eulerAngles.y == 90)
             {
