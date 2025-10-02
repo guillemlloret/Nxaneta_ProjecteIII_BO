@@ -7240,7 +7240,6 @@ GameObject:
   - component: {fileID: 898258349}
   - component: {fileID: 898258348}
   - component: {fileID: 898258347}
-  - component: {fileID: 898258350}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7311,7 +7310,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 898258350}
+      - m_Target: {fileID: 49091217}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadSceneEtapa2
         m_Mode: 1
@@ -7361,20 +7360,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898258344}
   m_CullTransparentMesh: 1
---- !u!114 &898258350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898258344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cfdffd650a6a1a4b88ad36b0de9713a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Restart: {fileID: 0}
-  _colorSelectPanel: {fileID: 351762079}
 --- !u!1 &901357952
 GameObject:
   m_ObjectHideFlags: 0
